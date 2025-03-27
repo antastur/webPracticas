@@ -1,0 +1,188 @@
+  
+ /*----------------------------------------------MENU PRINCIPAL----------------------------------------------*/ 
+  
+ /*Limpiamos los estilos por defecto del navegador*/
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+
+  /* Estilo para el menú principal */
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  li {
+    padding-bottom: 10px;
+    position: relative;
+  /* display: inline-block;*/
+   }
+
+
+  a {
+        color: rgb(7, 7, 7);
+        text-decoration: none;
+        padding: 10px 15px;
+        display:inline-flex;
+      }
+
+
+ 
+.menuNav > li:hover:not(:first-child){
+   /* background-color: #9b9a9a;*/
+   border-bottom: #3864f3 2px solid;
+  }
+ 
+ /* Estilo para el submenú (desplegable) */
+  li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f5f5;
+    min-width: 180px;
+    
+  }  
+
+
+  li:hover > ul {
+    display: block;
+    
+  }
+
+  
+  .desplegable{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color:#f8f5f5;
+    
+  } 
+
+  .desplegable > li:hover{
+    background-color: #ffffff;
+  }
+
+  li ul li:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+  
+  ul.despHorizontal > li{
+    border-bottom: none !important;
+  }
+
+ 
+  /* Estilo para los elementos del submenú 
+  li ul li {
+    display: block;
+  }*/
+  
+  /*Estilo para cabecera de email y telefono*/
+  .infMenu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    background-color: blue;
+    color:#ffffff;
+    padding-top: 10px;
+    flex-wrap: nowrap;
+    
+  }
+
+   .infMenu li{
+    padding-right: 5%;
+  }
+
+
+
+/*Estilo para el desplegable horizontal*/
+
+  .despHorizontal {
+    display:none;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    padding:5px 0;
+   /* white-space: nowrap;*/
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: nowrap;
+  }
+
+  li:hover  .despHorizontal{
+    display:flex;
+    
+  }
+
+  .despHorizontal li {
+    display: flex; 
+    
+    margin: 0 10px; 
+    
+  }
+
+
+
+
+  /*----------------------------------------------FOOTER----------------------------------------------*/
+
+
+footer{
+  background-color: black;
+  color:#ffffff;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;  
+  flex-wrap: wrap;
+
+}
+.pie{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.pie > div{
+  width:50%;
+  padding: 20px;
+}
+
+.pie div{
+  padding-top: 20px;
+}
+.contacto{
+  display:flex;
+  flex-direction: row;
+}
+.contacto div{
+  display:flex;
+  flex-direction: row;
+}
+
+.copyrigth{
+  width:100vw;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
