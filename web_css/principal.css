@@ -140,8 +140,13 @@ span{
     color:#ffffff;
   /*  padding-top: 10px; */
     flex-wrap: nowrap;
-    
-  }
+    }
+
+    .infMenu a{
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0;
+ }
 
    .infMenu li{
     padding-right: 5%;
