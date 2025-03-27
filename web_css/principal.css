@@ -9,6 +9,47 @@
     font-family: 'Roboto', sans-serif;
   }
 
+  body{
+    background-color: #f8f5f5;
+    color: #000000;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*Estilo comun para textos,titulos y enlaces*/
+h1{
+  background-color: black;
+  color:#ffffff;
+  font-size:250%;
+  text-align: center;
+  padding: 80px;
+  margin: 0;
+  }
+
+  h2{
+    font-size: 90%;
+    margin: 50px;
+    margin-bottom: 10px;;
+    }
+p{
+  margin-left: 50px;
+  margin-right: 50px;
+  font-weight:300;
+  margin-bottom: 10px;
+  font-size: 90%;
+  }
+
+span{
+  color:rgb(121, 170, 245);
+  text-decoration: underline;
+}
+
+.textoCentrado{
+  margin:40px;
+  text-align: center;
+}
+
 
 
   /* Estilo para el menú principal */
@@ -20,6 +61,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 10px;
   }
 
 
@@ -52,7 +94,6 @@
     left: 0;
     background-color: #f8f5f5;
     min-width: 180px;
-    
   }  
 
 
@@ -97,7 +138,7 @@
     align-items: center;
     background-color: blue;
     color:#ffffff;
-    padding-top: 10px;
+  /*  padding-top: 10px; */
     flex-wrap: nowrap;
     
   }
@@ -156,7 +197,7 @@ footer{
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   flex-wrap: wrap;
 }
 
@@ -171,13 +212,27 @@ footer{
 .contacto{
   display:flex;
   flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: #ffffff;
 }
 .contacto div{
   display:flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.copyrigth{
+.contacto a{
+  
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0px;
+}
+.contacto  a:hover{
+  text-decoration: underline;
+}
+
+.copyright{
   width:100vw;
   display:flex;
   flex-direction: row;
@@ -186,3 +241,12 @@ footer{
   flex-wrap: wrap;
 }
 
+.copyright a{
+  font-size: 70%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.copyright a:hover{
+  text-decoration: underline;
+}
