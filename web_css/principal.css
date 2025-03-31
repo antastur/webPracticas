@@ -10,7 +10,7 @@
   }
 
   body{
-    background-color: #f8f5f5;
+    background-color: #ffffff;
     color: #000000;
     font-size: 100%;
     margin: 0;
@@ -30,7 +30,8 @@ h1{
   h2{
     font-size: 90%;
     margin: 50px;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+    text-align: start;
     }
 p{
   margin-left: 50px;
@@ -179,8 +180,6 @@ span{
     margin: 0 10px; 
     
   }
-
-
 
 
   /*----------------------------------------------FOOTER----------------------------------------------*/
