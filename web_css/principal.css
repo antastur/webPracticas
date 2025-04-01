@@ -80,7 +80,18 @@ span{
         display:inline-flex;
       }
 
+      
+.logo{
+ width: 15px;
+ height: 15px; 
 
+}
+
+.despHorizontal img{
+  width: auto;
+  height: 5vw; 
+  
+}
  
 .menuNav > li:hover:not(:first-child){
    /* background-color: #9b9a9a;*/
@@ -148,6 +159,10 @@ span{
       text-decoration: none;
       padding: 0;
  }
+
+ .infMenu img{
+  vertical-align: middle; /* Asegura que las imágenes estén alineadas al texto */
+}
 
    .infMenu li{
     padding-right: 5%;

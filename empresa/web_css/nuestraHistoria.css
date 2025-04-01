@@ -1,0 +1,146 @@
+
+p{
+    margin-bottom: 30px;
+}
+ 
+
+.contenedor a{
+    width: 100%;
+    text-decoration: none;
+    color: #818080;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    border-radius: 4%;
+    margin-bottom: 2px;
+}
+
+.contenedor a:hover{
+    background-color: #e6e4e4;
+    transition: 0.3s;   
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.desp p{
+    padding: 0px;
+    margin:0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #818080;
+    line-height: 1; /* Ajusta el espaciado vertical */
+    }
+
+
+
+span{
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none ;
+}
+
+
+ul{
+    display:none;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.contenedor h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 0px;
+    font-weight: 400;
+   
+}
+
+.desp{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.desp p:last-child {
+    font-size: 30px; /* Ajusta el tamaño del símbolo + */
+    font-weight: bold; /* Asegura que sea más grueso */
+    margin: 0; /* Elimina márgenes adicionales */
+   
+}
+
+.nuestraHistoria{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:20px;
+    gap: 20px;
+}
+
+
+.imagenHistoria{
+    width: 45%;
+    margin-left: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;         
+    text-align: start;
+
+}
+
+
+.listasHistoria{
+    width: 45%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    gap:10px;
+}
+
+
+
+
+
+
+
+.cifras{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:80px;
+    margin-bottom: 80px;
+    gap: 20px;
+}
+
+.cifras h3{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cifras p{
+    font-size: 25px;
+    font-weight: lighter;
+}
