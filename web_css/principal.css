@@ -2,59 +2,52 @@
  /*----------------------------------------------MENU PRINCIPAL----------------------------------------------*/ 
   
  /*Limpiamos los estilos por defecto del navegador*/
+ 
+ 
+ body{
+  margin: 0;
+  padding: 0;
+  width:98vw; /*-----------------------¿PORQUE?-----------------------------*/
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000000;
+
+  }
+ 
+ 
+ 
  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
     font-family: 'Roboto', sans-serif;
   }
 
-  body{
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
+  h1{
+    font-size: 200%;
+    font-weight: 100%;
+    margin-left: 30px;
   }
 
-  /*Estilo comun para textos,titulos y enlaces*/
-h1{
-  background-color: black;
-  color:#ffffff;
-  font-size:250%;
-  text-align: center;
-  padding: 80px;
-  margin: 0;
+h2{
+  font-size: 140%;
+  margin: 10px;
+  margin-bottom: 10px;
+  text-align: start;
   }
 
-  h2{
-    font-size: 90%;
-    margin: 50px;
-    margin-bottom: 10px;
-    text-align: start;
-    }
+
+/*h3{
+  margin: 0px;
+  padding: 0px;
+  }  */
+
 p{
-  margin-left: 50px;
-  margin-right: 50px;
   font-weight:300;
   margin-bottom: 10px;
   font-size: 90%;
   }
 
-span{
-  color:rgb(121, 170, 245);
-  text-decoration: underline;
-}
-
-.textoCentrado{
-  margin:40px;
-  text-align: center;
-}
-
-
-
   /* Estilo para el menú principal */
-   ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -66,7 +59,7 @@ span{
   }
 
 
-  li {
+li {
     padding-bottom: 10px;
     position: relative;
   /* display: inline-block;*/
@@ -74,18 +67,24 @@ span{
 
 
   a {
-        color: rgb(7, 7, 7);
-        text-decoration: none;
-        padding: 10px 15px;
-        display:inline-flex;
+      color: rgb(7, 7, 7);
+      text-decoration: none;
+      padding: 10px 15px;
+      display:inline-flex;
       }
 
       
-.logo{
- width: 15px;
- height: 15px; 
+  .logo{
+    width: 15px;
+    height: 15px; 
+  }
 
-}
+  .logo2{
+    width: 30px;
+    height: 30px; 
+  }
+
+
 
 .despHorizontal img{
   width: auto;
@@ -93,9 +92,9 @@ span{
   
 }
  
-.menuNav > li:hover:not(:first-child){
-   /* background-color: #9b9a9a;*/
-   border-bottom: #3864f3 2px solid;
+.menuNav > li a:hover{
+   border-bottom: #3864f3 3px solid;
+   background-color:#f8f5f5;
   }
  
  /* Estilo para el submenú (desplegable) */
@@ -105,19 +104,18 @@ span{
     top: 100%;
     left: 0;
     background-color: #f8f5f5;
-    min-width: 180px;
+    min-width: 200px;
   }  
 
 
   li:hover > ul {
     display: block;
-    
   }
 
   
   .desplegable{
     position: absolute;
-    top: 0;
+    top: -8px;
     left: 100%;
     background-color:#f8f5f5;
     
@@ -150,7 +148,6 @@ span{
     align-items: center;
     background-color: blue;
     color:#ffffff;
-  /*  padding-top: 10px; */
     flex-wrap: nowrap;
     }
 
@@ -178,10 +175,9 @@ span{
     top: 100%;
     left: 0;
     padding:5px 0;
-   /* white-space: nowrap;*/
-   flex-direction: row;
-   justify-content: center;
-   flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
 
   li:hover  .despHorizontal{
@@ -201,6 +197,7 @@ span{
 
 
 footer{
+  width:100%;
   background-color: black;
   color:#ffffff;
   display:flex;
@@ -213,9 +210,9 @@ footer{
 .pie{
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content:space-around;
   align-items: center;
-  width: 100%;
+  width: 90%;
   padding: 10px;
   flex-wrap: wrap;
 }
@@ -234,11 +231,15 @@ footer{
   justify-content: flex-start;
   flex-wrap: wrap;
   color: #ffffff;
+  
 }
 .contacto div{
   display:flex;
   flex-direction: row;
+  justify-content: start;
   flex-wrap: wrap;
+  margin-right: 40px;
+  
 }
 
 .contacto a{
@@ -246,13 +247,26 @@ footer{
   color: #ffffff;
   text-decoration: none;
   padding: 0px;
+  margin-left: 0px;
 }
+
+.contacto img{
+  margin: 0px;
+  padding:0px;
+}
+
+.contacto p{
+
+  margin: 0px;
+  padding:0px;
+}
+
 .contacto  a:hover{
   text-decoration: underline;
 }
 
 .copyright{
-  width:100vw;
+  width:100%;
   display:flex;
   flex-direction: row;
   justify-content:space-between;
@@ -261,7 +275,7 @@ footer{
 }
 
 .copyright a{
-  font-size: 70%;
+  font-size: 100%;
   color: #ffffff;
   text-decoration: none;
 }
