@@ -84,7 +84,23 @@ li {
     height: 30px; 
   }
 
+  .logo3{
+    width:auto;
+    height: 10vh;
+  }
 
+.menu{
+  width:100%;
+  margin-bottom: 80px;
+  position:fixed;
+}
+
+.menuNav{
+  
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .despHorizontal img{
   width: auto;
@@ -92,9 +108,11 @@ li {
   
 }
  
-.menuNav > li a:hover{
-   border-bottom: #3864f3 3px solid;
-   background-color:#f8f5f5;
+.menuNav > li:hover{
+  
+   border-top: #0505b1ce 3px solid;
+   border-bottom: #0505b1ce 3px solid;
+   background-color:#c50808de;
   }
  
  /* Estilo para el submenú (desplegable) */
@@ -121,13 +139,27 @@ li {
     
   } 
 
-  .desplegable > li:hover{
-    background-color: #ffffff;
+ .desplegable > li:hover{
+    /*background-color: #ffffff;*/
+   border-top: #0505b1ce 3px solid;
+    border-bottom: #0505b1ce 3px solid;
+    background-color:#c50808de;
   }
 
-  li ul li:not(:last-child) {
-    border-bottom: 1px solid black;
+  .submenu > li:hover{
+    border-top: #0505b1ce 3px solid;
+    border-bottom: #0505b1ce 3px solid;
+    background-color:#c50808de;
   }
+
+  .despHorizontal > li:hover{
+    border-top: #0505b1ce 3px solid;
+    border-bottom: #0505b1ce 3px solid;
+    background-color:#c50808de;
+  }
+ /* li ul li:not(:last-child) {
+    border-bottom: 1px solid black;
+  }*/
   
   ul.despHorizontal > li{
     border-bottom: none !important;
@@ -146,7 +178,7 @@ li {
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    background-color: blue;
+    background-color: rgba(5, 5, 177, 0.808);
     color:#ffffff;
     flex-wrap: nowrap;
     }
@@ -198,7 +230,7 @@ li {
 
 footer{
   width:100%;
-  background-color: black;
+  background-color: rgba(5, 5, 177, 0.808);
   color:#ffffff;
   display:flex;
   flex-direction: column;
@@ -229,6 +261,7 @@ footer{
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   color: #ffffff;
   
@@ -237,6 +270,7 @@ footer{
   display:flex;
   flex-direction: row;
   justify-content: start;
+  align-items: center;
   flex-wrap: wrap;
   margin-right: 40px;
   

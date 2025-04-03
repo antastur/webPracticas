@@ -1,10 +1,11 @@
 h1{
-  background-color: black;
+  background-color: rgba(5, 5, 177, 0.808);
   color:#ffffff;
   font-size:250%;
   text-align: center;
   padding: 80px;
   margin: 0px;
+  padding-top: 29vh;
   }
 
   h2{
@@ -12,6 +13,7 @@ h1{
     margin: 50px;
     margin-bottom: 10px;
     text-align: start;
+    color:rgba(5, 5, 177, 0.808);
     }
 
  p{
