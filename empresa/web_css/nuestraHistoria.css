@@ -4,6 +4,21 @@ p{
 }
  
 
+.espaciadoMenu{
+    padding-top: 30vh;
+  }
+  
+  h1{
+    background-color: rgba(5, 5, 177, 0.808);
+    color:#ffffff;
+    font-size:250%;
+    text-align: center;
+    padding: 80px;
+    margin: 0px;
+    
+    }
+
+    
 .contenedor a{
     width: 100%;
     text-decoration: none;
