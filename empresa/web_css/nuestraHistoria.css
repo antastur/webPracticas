@@ -1,5 +1,7 @@
 
-p{
+p{  
+    margin-left:4vw; 
+    margin-right:4vw;
     margin-bottom: 30px;
 }
  
@@ -18,6 +20,17 @@ p{
     
     }
 
+
+ .contenedor{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        
+    }
+    
     
 .contenedor a{
     width: 100%;
@@ -27,6 +40,7 @@ p{
     background-color: #f1f1f1;
     border-radius: 4%;
     margin-bottom: 2px;
+   
 }
 
 .contenedor a:hover{
@@ -54,18 +68,10 @@ span{
 }
 
 
-ul{
+ ul{
     display:none;
 }
 
-.contenedor{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
 
 
 .contenedor h2{

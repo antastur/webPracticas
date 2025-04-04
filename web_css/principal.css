@@ -110,9 +110,10 @@ li {
  
 .menuNav > li:hover{
   
-   border-top: #0505b1ce 3px solid;
-   border-bottom: #0505b1ce 3px solid;
-   background-color:#c50808de;
+   border-top: #c50808de 5px solid;
+   border-bottom: #c50808de 5px solid;
+   color:#c50808de;
+ /*  background-color:#c50808de;*/
   }
  
  /* Estilo para el submenú (desplegable) */
@@ -133,37 +134,47 @@ li {
   
   .desplegable{
     position: absolute;
-    top: -8px;
+    top: -12px;
     left: 100%;
     background-color:#f8f5f5;
     
   } 
 
  .desplegable > li:hover{
-    /*background-color: #ffffff;*/
+    /*background-color: #ffffff;
    border-top: #0505b1ce 3px solid;
     border-bottom: #0505b1ce 3px solid;
-    background-color:#c50808de;
+    background-color:#c50808de;*/
+    border-top: #c50808de 5px solid;
+    border-bottom: #c50808de 5px solid;
+    color:#c50808de;
   }
 
   .submenu > li:hover{
-    border-top: #0505b1ce 3px solid;
+  /*  border-top: #0505b1ce 3px solid;
     border-bottom: #0505b1ce 3px solid;
-    background-color:#c50808de;
+    background-color:#c50808de; */
+    border-top: #c50808de 5px solid;
+    border-bottom: #c50808de 5px solid;
+    color:#c50808de;
   }
 
   .despHorizontal > li:hover{
-    border-top: #0505b1ce 3px solid;
+   /* border-top: #0505b1ce 3px solid;
     border-bottom: #0505b1ce 3px solid;
-    background-color:#c50808de;
+    background-color:#c50808de; */
+    border-top: #c50808de 5px solid;
+    border-bottom: #c50808de 5px solid;
+    color:#c50808de;
+    
   }
  /* li ul li:not(:last-child) {
     border-bottom: 1px solid black;
   }*/
   
-  ul.despHorizontal > li{
+ /* ul.despHorizontal > li{
     border-bottom: none !important;
-  }
+  } */
 
  
   /* Estilo para los elementos del submenú 
