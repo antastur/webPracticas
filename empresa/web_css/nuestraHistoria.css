@@ -21,6 +21,12 @@ p{
     }
 
 
+.menu{
+    z-index: 1000;
+}
+
+
+
  .contenedor{
         width: 100%;
         height: 100%;
@@ -137,10 +143,19 @@ span{
 }
 
 
+.listasHistoria li{
+    display:flex;
+    align-items: start;
+    gap:5px;
+    z-index: 0;
+    
+    
+}
 
-
-
-
+span{
+   
+    
+}
 
 .cifras{
     width: 100%;
