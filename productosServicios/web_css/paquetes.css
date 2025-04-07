@@ -12,3 +12,106 @@
     margin: 0px;
     
     }
+
+    .foto{
+      width:100%;
+      height: auto;
+      padding-top: 5px;;
+    }
+    .foto img{
+      width:100%;
+    }
+
+    .grande{
+      font-size: 30px;
+      width: 100%;
+      height: auto;
+      text-align: center;
+
+      padding:5%;
+    }
+
+    .masGrande{
+      font-size: 40px;
+      width: 100%;
+      height: auto;
+      text-align: center;
+
+      
+    }
+
+    .imgMasTexto{
+      width: 100%;
+      height: auto;
+      display:flex;
+      flex-direction: row;
+      justify-content:space-around;
+      align-items: start;
+      flex-wrap: wrap;  
+      gap:0px;
+      margin-bottom: 5px;;
+    }
+
+    .imgMasTexto > img{
+      width: 50%;
+      height: auto;
+      min-width: 400px;
+   
+    }
+
+   
+
+    .texto{
+      width: 45%;
+      display:flex;
+      flex-direction: column;
+      justify-content:flex-start;
+      align-items:flex-start; 
+      flex-wrap: wrap;
+        
+    }
+
+    .texto > p{
+      font-size: 18px;
+      width: 100%;
+      height: auto;
+      text-align: justify;
+    
+    }
+
+    .texto li{
+      display:flex;
+      flex-direction: row;
+      justify-content:start;
+      align-items:start;
+      gap:5px;
+      
+    } 
+
+    .texto ul{
+      display:flex;
+      flex-direction: column;
+      justify-content:start;
+      align-items:flex-start;
+    }
+
+    .texto ul {
+      z-index: 0;
+    }
+
+    .texto img {
+      z-index: 0;
+    }
+
+    .texto a{
+      text-decoration: none;
+      color: #09598f;
+      font-weight: bold;
+      padding-top: 0px;
+    }
+
+    .texto a:hover{
+      color: #09598f;
+      font-weight: bold;
+      text-decoration: underline;
+    }
