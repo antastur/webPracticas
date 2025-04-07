@@ -188,6 +188,16 @@ h3{
 
 /*------------------------Ventana cookies-----------------------------*/
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  z-index: 999; /* Asegura que esté por encima del contenido */
+  display: block; /* Oculto por defecto */
+}
 
 .cookie-popup {
   position: fixed;
@@ -205,6 +215,16 @@ h3{
   align-items: center;
   z-index: 1000;
   font-size: 14px;
+  /*display: none; 
+    z-index: 1000; 
+    font-size: 14px; */
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre los botones */
 }
 
 .cookie-popup p {
@@ -230,8 +250,10 @@ h3{
   padding: 8px 12px;
   cursor: pointer;
   font-size: 14px;
+  margin: 5px;
 }
 
 .cookie-popup button:hover {
   background-color: #0056b3;
 }
+
