@@ -3,6 +3,16 @@
     padding-top: 30vh;
   }
   
+  hr{
+    width: 50%;
+    border: 0;
+    height: 4px;
+    background-color:  rgba(42, 107, 230, 0.808);
+    margin: 30px  auto 10px auto;
+    
+  }
+
+
   h1{
     background-color: rgba(5, 5, 177, 0.808);
     color:#ffffff;
@@ -36,8 +46,19 @@
       width: 100%;
       height: auto;
       text-align: center;
-
+      margin-bottom:5%;
       
+    }
+
+    .cont{
+      width: 100%;
+      height: auto;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      flex-wrap: wrap;
+      gap:0px;
     }
 
     .imgMasTexto{
@@ -49,7 +70,8 @@
       align-items: start;
       flex-wrap: wrap;  
       gap:0px;
-      margin-bottom: 5px;;
+      margin-bottom: 80px;
+     
     }
 
     .imgMasTexto > img{
@@ -59,10 +81,15 @@
    
     }
 
-   
+   .image > img{
+      width: 100%;
+      height: auto;
+      min-width: 400px;
+    }
 
     .texto{
       width: 45%;
+      min-width: 400px;
       display:flex;
       flex-direction: column;
       justify-content:flex-start;
@@ -76,6 +103,7 @@
       width: 100%;
       height: auto;
       text-align: justify;
+      padding: 0px;
     
     }
 
@@ -93,16 +121,10 @@
       flex-direction: column;
       justify-content:start;
       align-items:flex-start;
-    }
-
-    .texto ul {
       z-index: 0;
     }
 
-    .texto img {
-      z-index: 0;
-    }
-
+   
     .texto a{
       text-decoration: none;
       color: #09598f;
@@ -110,8 +132,45 @@
       padding-top: 0px;
     }
 
+
     .texto a:hover{
       color: #09598f;
       font-weight: bold;
       text-decoration: underline;
+    }
+
+
+    .image{
+      width: 50%;
+      min-width: 400px;
+      height: auto;
+      display:flex;
+      flex-direction: column;
+      justify-content:start;
+      align-items: start;
+      flex-wrap: wrap;
+      gap:0px;
+    }
+
+
+    .image > p{
+      font-size: 18px;
+      width: 100%;
+      height: auto;
+      text-align: justify;
+      padding: 0px;
+      padding-top: 20px;
+    }
+
+
+    .final {
+      font-size: 18px;
+      width: 95%;
+      height: auto;
+      text-align: justify;
+      padding: 20px;
+      margin-left: 20px;
+      background-color: rgb(229, 239, 247);  
+      border-radius: 20px;
+      border: #09598f solid 2px;
     }
