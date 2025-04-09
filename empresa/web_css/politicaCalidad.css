@@ -12,3 +12,19 @@
     margin: 0px;
     
     }
+
+    h2{
+      text-align: center;
+      margin-top:80px;
+      margin-bottom:80px;
+      
+    }
+
+    p{
+      padding:20px 140px;
+    }
+
+
+    footer p{
+      padding: 0px;
+    }
