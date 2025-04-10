@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trabajaConNosotros</title>
-    <script src="web_js/principal.js"></script>
+   
     <link rel="stylesheet" href="../../web_css/principal.css">
     <link rel="stylesheet" href="../web_css/trabajaConNosotros.css">
 </head>
@@ -92,9 +92,9 @@
 
 
 
-    <form id="contactForm" action="enviarFormulario.php" method="POST">
+    <form id="jobApplicationForm" action="procesarFormulario.php" method="POST" enctype="multipart/form-data">
         <div>
-            <label for="nombre">Nombre:</label>
+            <label for="nombre">Nombre y Apellidos:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos">
         </div>
         <div>
@@ -106,29 +106,98 @@
             <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
         </div>
         <div>
-            <label for="provincio">Provincia:</label>
-            <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" name="provincia" required>
+                <option value="">Selecciona tu provincia</option>
+                <option value="ACoruña">A Coruña</option>
+                <option value="Madrid">Alava</option>
+                <option value="Madrid">Albacete</option>
+                <option value="Madrid">Alicante</option>
+                <option value="Madrid">Almería</option>
+                <option value="Madrid">Asturias</option>
+                <option value="Madrid">Ávila</option>
+                <option value="Madrid">Badajoz</option>
+                <option value="Madrid">Baleares</option>
+                <option value="Madrid">Barcelona</option>
+                <option value="Madrid">Burgos</option>
+                <option value="Madrid">Cáceres</option>
+                <option value="Madrid">Cádiz</option>
+                <option value="Barcelona">Cantabria</option>
+                <option value="Valencia">Castellón</option>
+                <option value="Sevilla">Ceuta</option>
+                <option value="Zaragoza">Ciudad Real</option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+                <option value=></option>
+
+            </select>
         </div>
-
-
-
         <div>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
+            <label for="nivelEstudios">Nivel de Estudios:</label>
+            <select id="nivelEstudios" name="nivelEstudios" required>
+                <option value="">Selecciona tu nivel de estudios</option>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="ESO">ESO</option>
+                <option value="Estudios Secundarios">Estudios Secundarios</option>
+                <option value="Otros Estudios">Otros Estudios</option>
+                <option value="Otros">Otros</option>
+            </select>
         </div>
-        <div class="formFooter">
-        <div >
+        <div>
+            <label for="areaFuncional">Área Funcional:</label>
+            <select id="areaFuncional" name="areaFuncional" required>
+                <option value="">Selecciona tu área funcional</option>
+                <option value="Contabilidad">Contabilidad</option>
+                <option value="Ventas">Ventas</option>
+                <option value="Tráfico">Tráfico</option>
+                <option value="Administración Tráfico">Administración Tráfico</option>
+                <option value="Atención Cliente">Atención Cliente</option>
+                <option value="Operativa Almacén">Operativa Almacén</option>
+                <option value="Conductor">Conductor</option>
+                <option value="Mantenimiento">Mantenimiento</option>
+                <option value="Otros">Otros</option>
+            </select>
+        </div>    
+        <div>
+            <label for="tipoContrato">Tipo de Contrato:</label>
+            <select id="tipoContrato" name="tipoContrato" required>
+                <option value="">Selecciona el tipo de contrato</option>
+                <option value="Tiempo Completo">Tiempo Completo</option>
+                <option value="Tiempo Parcial">Tiempo Parcial</option>
+                <option value="Contrato Temporal">Contrato Temporal</option>
+                <option value="Formación">Formación</option>
+                <option value="Becario/Prácticas">Becario/Prácticas</option>
+            </select>
+        </div>
+        <div>
+            <label for="cv">Adjuntar CV:</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+        </div>
+        <div>
             <input type="checkbox" id="privacidad" name="privacidad" required>
-            <label for="privacidad">Acepto las <a href="../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
+            <label for="privacidad">Acepto las <a href="../../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
         </div>
-        
-            <button type="submit">Enviar</button>
+        <div>
+            <button type="submit" id="submitButton" disabled>Enviar</button>
         </div>
     </form>
-
-
-
-
 
 
 
@@ -184,5 +253,7 @@
 
 
      </footer>
+
+     <script src="../web_js/trabajaConNosotros.js"></script>
 </body>
 </html>
