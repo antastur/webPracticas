@@ -12,3 +12,30 @@
     margin: 0px;
     
     }
+
+    .contenedor{
+      box-sizing: border-box;
+      width:100%;
+      display:flex;
+      justify-content: center;
+      align-items: start;
+      margin-top: 100px;
+      flex-wrap: wrap;
+     
+    }
+
+    .contenedor img{
+      width:50%;
+      min-width: 400px;
+      padding: 40px;
+      
+    }
+    .contenedor div{
+      width:50%;
+      min-width: 400px;
+      padding: 40px;
+    }
+    .contenedor p{
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }

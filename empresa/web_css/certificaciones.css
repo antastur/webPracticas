@@ -2,7 +2,14 @@
 .espaciadoMenu{
     padding-top: 30vh;
   }
-  
+  hr{
+    width: 50%;
+    border: 1;
+    height: 4px;
+    background-color:  rgba(42, 107, 230, 0.808);
+    margin: 80px  auto 60px auto;
+    
+  }
   h1{
     background-color: rgba(5, 5, 177, 0.808);
     color:#ffffff;
@@ -12,3 +19,139 @@
     margin: 0px;
     
     }
+
+    h2{
+      
+      text-align: center;
+    }
+
+    .certificado a{
+      font-size: 10px;
+    }
+
+    .certificado2 a{
+      font-size: 10px;
+    }
+
+    .certificado a:hover{
+      text-decoration: underline;
+   }
+
+   .certificado2 a:hover{
+    text-decoration: underline;
+ }
+
+    .contenedor{
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      margin-top: 70px;
+      
+    }
+
+    .subContenedor1{
+      width:100%;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap:wrap-reverse;
+     
+    }
+
+    .subContenedor2{
+      width:100%;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap:wrap;
+     
+    }
+
+    
+
+    .imagenes{
+      width:50%;
+      display:flex; 
+      flex-direction: row; 
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; 
+      
+    }
+
+    .imagenes2{
+      width:100%;
+      display:flex; 
+      flex-direction: row; 
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;    
+    }
+
+    .certificado{
+      width:50%;
+      min-width:280px;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .certificado2{
+      width:33%;
+      min-width:280px;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tamLogo{
+      width: 60%;
+    }
+
+    .tamLogo2{
+      width: 100%;
+    }
+
+    .tamLogo3{
+      width: 80%;
+    }
+
+    .textos{
+      width:50%;
+      min-width: 400px;
+      display:flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .textos2{
+      width:100%;
+      min-width: 400px;
+      display:flex;
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
+    .textos p{
+      /*padding-left: 100px;
+      padding-right: 100px;*/
+      margin-left: 100px;
+      margin-right: 100px;
+      text-align: center;
+    }
+
+    .textos2 p{
+      /*padding-left: 100px;
+      padding-right: 100px;*/
+      margin-left: 100px;
+      margin-right: 100px;
+      text-align: center;
+    }
+
+  

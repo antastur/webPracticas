@@ -31,9 +31,9 @@
                    
                     <li><a href="equipoHumano.html">RECURSOS HUMANOS</a>
                         <ul class="desplegable">
-                            <li><a href="equipoHumano.html">POLÍTICA DE RRHH</a></li>
-                            <li><a href="carrerasProfesionales.html">FORMACIÓN</a></li>
-                            <li><a href="trabajaConNosotros.html">OFERTAS DE EMPLEO</a></li>    
+                            <li><a href="equipoHumano.html">EQUIPO HUMANO</a></li>
+                            <li><a href="carrerasProfesionales.html">CARRERAS PROFESIONALES</a></li>
+                            <li><a href="trabajaConNosotros.html">TRABAJA CON NOSOTROS</a></li>    
 
                         </ul>
                     
@@ -92,7 +92,39 @@
 
 
 
+    <form id="contactForm" action="enviarFormulario.php" method="POST">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Tu email">
+        </div>
+        <div>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
+        </div>
+        <div>
+            <label for="provincio">Provincia:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
+        </div>
 
+
+
+        <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <div class="formFooter">
+        <div >
+            <input type="checkbox" id="privacidad" name="privacidad" required>
+            <label for="privacidad">Acepto las <a href="../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
+        </div>
+        
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
 
 
 
