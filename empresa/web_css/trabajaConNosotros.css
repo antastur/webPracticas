@@ -13,8 +13,57 @@
     margin-bottom:5px;
     }
 
+    h4{
+        color:#007bff;
+        font-size: 30px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+  p{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+    .contenedorHorizontal{
+        
+        width:98vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch; 
+        
+      
+       
+        
+       
+       flex-wrap: wrap;
+       
+        
+
+    }
+
+    .imagenes{
+       
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width:60%;
+        min-width: 600px;
+       
+       gap:5px
+    
+
+
+    }
+
     form {
-      max-width: 600px;
+      
+      width:600px;
+      min-width: 400px;
+    /* max-width: 600px; */
       margin: 0 auto;
       padding: 20px;
       border: 1px solid #ccc;
@@ -25,9 +74,11 @@
   
   form div {
       margin-bottom: 15px;
+     
   }
   
   label {
+    color:#007bff;
       display: block;
       font-weight: bold;
       margin-bottom: 5px;
@@ -65,3 +116,11 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.ruta{
+   width: 100%;
+   border-radius: 25px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+}
+

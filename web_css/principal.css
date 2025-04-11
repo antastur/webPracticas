@@ -94,10 +94,11 @@ li {
  
 
 .menu{
+  z-index: 998;
   width:100%;
   margin-bottom: 80px;
   position:fixed;
-  z-index: 1000;
+ 
 }
 
 .menuNav{
