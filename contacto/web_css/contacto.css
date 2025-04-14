@@ -98,6 +98,7 @@
    .texto p{
     width: 100%;
     min-width: 200px;
+    text-align: justify;
    }
 
    iframe{
@@ -115,7 +116,7 @@
 
   form {
       width:40%;
-      min-width: 280px;
+      min-width: 400px;
       height: 700px;
       display:flex;
       flex-direction: column;

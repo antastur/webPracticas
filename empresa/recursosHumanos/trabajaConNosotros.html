@@ -117,6 +117,7 @@
 
 
             <form id="jobApplicationForm" action="procesarFormulario.php" method="POST" enctype="multipart/form-data">
+               
                 <div>
                     <label for="nombre">Nombre y Apellidos:</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos">
@@ -229,11 +230,14 @@
                     <label for="cv">Adjuntar CV:</label>
                     <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
                 </div>
-                <div>
+
+
+
+                  <div class="pieForm"> 
                     <input type="checkbox" id="privacidad" name="privacidad" required>
                     <label for="privacidad">Acepto las <a href="../../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
-                </div>
-                <div>
+                 </div> 
+                 <div>  
                     <button type="submit" id="submitButton" disabled>Enviar</button>
                 </div>
             </form>

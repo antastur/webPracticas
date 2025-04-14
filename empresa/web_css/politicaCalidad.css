@@ -1,8 +1,9 @@
 
-.espaciadoMenu{
+  .espaciadoMenu{
     padding-top: 30vh;
-  }
+   }
   
+
   h1{
     background-color: rgba(5, 5, 177, 0.808);
     color:#ffffff;
@@ -10,21 +11,68 @@
     text-align: center;
     padding: 80px;
     margin: 0px;
-    
     }
+
 
     h2{
       text-align: center;
       margin-top:80px;
       margin-bottom:80px;
+       }
+
+
+    p{
+      
+      text-align: justify;
+      
+     
+    }
+
+
+    .contenedor{
+        width: 98vw;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        
+        flex-wrap: wrap;
+        
+    }
+
+
+    .foto{
+     
+      width: 40%;
+      height:60% ;
+      min-width: 400px;
+      padding: 15px;
       
     }
 
-    p{
-      padding:20px 140px;
-    }
+    .texto{
+      width: 50%;
+      min-width: 400px;
+      display:flex;
+      flex-direction: column; 
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      
+     }
+
+     .imagen{
+     
+      align-self: flex-start;
+     }
 
 
     footer p{
-      padding: 0px;
+      text-align: start;
     }
+
+   
+
+    
+
+
+    

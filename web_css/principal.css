@@ -319,7 +319,12 @@ footer p{
   }
 
   .pie1{
+    min-width: 400px;
+    margin-top: 5px;
+  }
 
+  .pie2{
+    min-width: 400px;
     margin-top: 5px;
   }
 
@@ -380,10 +385,11 @@ footer p{
 
 .copyright{
   width:100%;
+  min-width: 400px;
   display:flex;
   flex-direction: row;
   justify-content:space-between;
-  align-items: baseline;
+  align-items: center;
   padding: 40px;
   flex-wrap: wrap;
 }
