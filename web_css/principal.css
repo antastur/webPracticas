@@ -7,7 +7,7 @@
  body{
   margin: 0;
   padding: 0;
-  width:98vw; /*-----------------------¿PORQUE?-----------------------------*/
+  width:100%; 
   box-sizing: border-box;
   background-color: #ffffff;
   color: #000000;
@@ -60,7 +60,7 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 10px;
+    padding-top: 10px; 
   }
 
 
@@ -75,8 +75,8 @@ li {
      /* color: rgb(7, 7, 7);*/
       color: #007bff;
       text-decoration: none;
-      padding: 10px 15px;
-      display:inline-flex;
+      padding: 10px 15px; 
+      display:inline-flex; 
       }
 
       
@@ -88,6 +88,32 @@ li {
         text-decoration:none;
     }
     
+ /*--------------------------------Estilo para cabecera de email y telefono----------------------------------------*/
+ .infMenu{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  background-color: rgba(5, 5, 177, 0.808);
+  color:#ffffff;
+  flex-wrap: nowrap;
+  }
+
+  .infMenu a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0;
+}
+
+  .infMenu img{
+    vertical-align: middle; 
+    height: 80%;
+  }
+
+  .infMenu li{
+    padding-right: 5%;
+  }
 
       
 /*-------------------------------------------------AJUSTES MENU NAVEGACIÓN----------------------------------------------------*/
@@ -98,32 +124,27 @@ li {
   width:100%;
   margin-bottom: 80px;
   position:fixed;
- 
-}
+ }
+
 
 .menuNav{
-  
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap:30px;
 }
 
-.despHorizontal img{
-  width: auto;
-  height: 5vw; 
-  
-}
+
  
 .menuNav > li:hover{
-  
-   border-top: #c50808de 5px solid;
-   border-bottom: #c50808de 5px solid;
-   color:#c50808de;
- /*  background-color:#c50808de;*/
+  border-top: #c50808de 5px solid;
+  border-bottom: #c50808de 5px solid;
   }
  
  /* Estilo para el submenú (desplegable) */
   li ul {
+    margin-top: 0px;
+    padding-top: 0px; 
     display: none;
     position: absolute;
     top: 100%;
@@ -139,108 +160,83 @@ li {
 
   
   .desplegable{
+    margin-top: 0px;
+    padding-top: 0px; 
     position: absolute;
-    top: -12px;
+    top: 0px;
     left: 100%;
     background-color:#f8f5f5;
+    z-index: 1000;
     
   } 
 
  .desplegable > li:hover{
-    /*background-color: #ffffff;
-   border-top: #0505b1ce 3px solid;
-    border-bottom: #0505b1ce 3px solid;
-    background-color:#c50808de;*/
+    margin-top: 0px;
+    padding-top: 0px;
     border-top: #c50808de 5px solid;
     border-bottom: #c50808de 5px solid;
     color:#c50808de;
+  }
+
+  .submenu{
+    z-index: 999;
   }
 
   .submenu > li:hover{
   /*  border-top: #0505b1ce 3px solid;
     border-bottom: #0505b1ce 3px solid;
     background-color:#c50808de; */
+    margin-top: 0px;
+    padding-top: 0px;
+
     border-top: #c50808de 5px solid;
     border-bottom: #c50808de 5px solid;
-    color:#c50808de;
+   /* color:#c50808de;*/
   }
 
-  .despHorizontal > li:hover{
-   /* border-top: #0505b1ce 3px solid;
-    border-bottom: #0505b1ce 3px solid;
-    background-color:#c50808de; */
+  .horizontal2 > li:hover{
+  
     border-top: #c50808de 5px solid;
     border-bottom: #c50808de 5px solid;
-    color:#c50808de;
+  
     
   }
- /* li ul li:not(:last-child) {
-    border-bottom: 1px solid black;
-  }*/
-  
- /* ul.despHorizontal > li{
-    border-bottom: none !important;
-  } */
+
+  .horizontal img{
+    width: auto;
+    height: 4vW; 
+    }
 
  
-  /* Estilo para los elementos del submenú 
-  li ul li {
-    display: block;
-  }*/
 
-
+.horizontal{
+  display:none;
+  margin-top: 0px;
+  padding-top: 0px; 
+  position: absolute;
   
+  top: 100%;
+  left: -120%;
+  background-color:white;
+  z-index: 999;
+ 
+}
+  
+.horizontal2{
+  display:flex;
+  justify-content: start;
+  align-items: center;
+}
 /*Estilo para el desplegable horizontal*/
 
-.despHorizontal {
-  display:none;
-  position:absolute;
-  top: 100%;
-  left: 0;
-  padding:5px 0;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
 
-li:hover  .despHorizontal{
-  display:flex;
+
+
+
+
+
   
-}
-
-.despHorizontal li {
-  display: flex; 
-  
-  margin: 0 10px; 
-  
-}
-  
-  /*--------------------------------Estilo para cabecera de email y telefono----------------------------------------*/
-  .infMenu{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    background-color: rgba(5, 5, 177, 0.808);
-    color:#ffffff;
-    flex-wrap: nowrap;
-    }
-
-    .infMenu a{
-      color: #ffffff;
-      text-decoration: none;
-      padding: 0;
- }
-
-    .infMenu img{
-      vertical-align: middle; 
-    }
-
-    .infMenu li{
-      padding-right: 5%;
-    }
-
+ 
 
 
 
@@ -299,7 +295,7 @@ footer p{
   width: 90%;
   padding: 20px;
   flex-wrap: wrap;
-  
+  text-align: justify;
 }
 
 
@@ -374,7 +370,7 @@ footer p{
 }
 
 .contacto p{
-
+  width: 90%;
   margin: 0px;
   padding:0px;
 }
@@ -392,6 +388,7 @@ footer p{
   align-items: center;
   padding: 40px;
   flex-wrap: wrap;
+  
 }
 
 .copyright a{
@@ -403,3 +400,131 @@ footer p{
 .copyright a:hover{
   text-decoration: underline;
 }
+
+/* Ocultar el checkbox */
+.input {
+  display: none;
+}
+
+.hamburger{
+  display: none;
+}
+
+@media (max-width: 480px) {
+ 
+  .menuNav {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Cambia a diseño vertical */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #abcef3;
+    border-radius: 10px;;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menuNav >img{
+  position: relative;
+  top:5px;
+  left: 0;
+  align-self: flex-start;
+}
+.menuNav li {
+  text-align: center;
+  padding: 0px 0;
+  background-color:  rgba(5, 5, 177, 0.808);
+  border: #007bff 2px solid;
+  border-radius: 10px;
+}
+
+.menuNav ul{
+ background-color: rgb(171, 206, 243,0);
+  border-radius: 10px;
+  padding: 0px 0;
+  margin: 0px 0;
+}
+
+.menuNav a{
+  color:#ffffff;
+}
+
+/* Estilo para el ícono de hamburguesa */
+.hamburger {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  z-index: 1001;
+}
+
+/* Mostrar el menú cuando el checkbox está activado */
+.input:checked ~ .menuNav {
+  display: flex; /* Muestra el menú */
+}
+
+
+.input:checked ~.hamburger{
+  background-color: white;
+  color:#007bff ;
+}
+
+/* Ocultar el checkbox */
+.input {
+  display: none;
+}
+
+.submenu{
+  display: none;
+  position: absolute;
+  max-width: 45vw;
+  top: 0px;
+  left: -35vw;
+  background-color:#abcef3;
+  z-index: 1000;
+}
+
+.submenu li{
+  background-color: (5, 5, 177, 0.808);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+

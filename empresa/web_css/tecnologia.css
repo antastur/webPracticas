@@ -54,6 +54,7 @@
 
  .textoTecnologia{
     width: 35%;
+    min-width: 280px;
     height: auto;
     display: flex;
     flex-direction: column;

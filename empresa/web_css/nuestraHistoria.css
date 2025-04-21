@@ -20,22 +20,20 @@
 }
 
 .primera{
-    width: 98vw;
+    width: 100%;
     margin-top:5px;
    
 }
 
 .texto{
-    width: 98vw;
-    padding-left: 3vw; 
-    padding-right:3vw;
+    width: 90%;
     padding-bottom: 30px;
     text-align: justify;
 }
 
  .contenedor{
     margin-bottom: 50px;
-        width: 98vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: start; 
@@ -112,15 +110,14 @@ span{
 }
 
 .nuestraHistoria{
-    width: 95%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    
     flex-wrap: wrap;
-    /*margin:20px;*/
+    margin-bottom:60px;
     gap: 20px;
 }
 

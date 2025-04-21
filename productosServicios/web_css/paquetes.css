@@ -23,6 +23,11 @@
     
     }
 
+    h2{
+      text-align: center;
+      padding: 50px;
+    }
+
     .foto{
       width:100%;
       height: auto;
@@ -165,7 +170,7 @@
       height: auto;
       text-align: justify;
       padding: 20px;
-      margin-left: 20px;
+     
       background-color: rgb(229, 239, 247);  
       border-radius: 20px;
       border: #09598f solid 2px;
