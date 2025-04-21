@@ -1,6 +1,4 @@
-
-  
- /*----------------------------------------------MENU PRINCIPAL----------------------------------------------*/ 
+/*----------------------------------------------MENU PRINCIPAL----------------------------------------------*/ 
   
  /*Limpiamos los estilos por defecto del navegador*/
  
@@ -413,6 +411,8 @@ footer p{
 
 @media (max-width: 480px) {
  
+  /* Estilo para el menú principal en pantallas pequeñas */
+  
   .menuNav {
     display: none; /* Oculto por defecto */
     flex-direction: column; /* Cambia a diseño vertical */
@@ -431,10 +431,11 @@ footer p{
   left: 0;
   align-self: flex-start;
 }
+
 .menuNav li {
   text-align: center;
   padding: 0px 0;
-  background-color:  rgba(5, 5, 177, 0.808);
+  background-color:  rgba(5, 5, 177);
   border: #007bff 2px solid;
   border-radius: 10px;
 }
@@ -484,48 +485,108 @@ footer p{
 .submenu{
   display: none;
   position: absolute;
-  max-width: 45vw;
-  top: 0px;
-  left: -35vw;
-  background-color:#abcef3;
+  width: 100%;
+  top: 40px;
+  /*left: -75%;*/
+  left:  -90%;
   z-index: 1000;
 }
 
 .submenu li{
-  background-color: (5, 5, 177, 0.808);
+  background-color: #007bff ;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+ 
 }
 
 
 
+.desplegable li{
+  border: rgba(22, 22, 22, 0) 15px solid;
+  border-radius: 10px;
+}
+
+.horizontal{
+  display:none;
+  width:90vw; 
+  margin-top: 0px;
+  padding-top: 0px; 
+  position: absolute;
+  top: 100%;
+  left: -25%;
+  background-color:white;
+  z-index: 1001;
+ 
+}
+
+.horizontal2 img{
+  
+  
+  margin-left: 0px;
+  width: 60px;
+}
+
+.horizontal li{
+  background-color: #007bff ;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+  height: 80px;
+  width: 80px;
+  text-align: left;
+  
+ 
+}
+
+  
+.horizontal2{
+  display:flex;
+  height: 80px;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.desplegable{
+  /*display: none;*/
+  position: absolute;
+  left:45%;
+  top: 0%;
+  z-index: 1001;  
+}
+
+.submenu2{
+  /*display: none;*/
+  position: absolute;
+  left:-40%;
+  top: 40px;
+  z-index: 1001;  
+}
+
+.submenu li{
+  background-color: #007bff ;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+  height: 70px;
+  text-align: left;
+  
+ 
+}
+
+.desplegable li{
+  background-color:rgba(5, 5, 177);
+  padding: 0px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.submenu2 .desplegable{
+  position: absolute;
+  left: 60%;
+  top: -120%;
+  z-index: 1001;  
+}
 }
 
 
