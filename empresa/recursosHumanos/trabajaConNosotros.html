@@ -46,28 +46,29 @@
             </li>
 
             <li ><a href="#">PRODUCTOS Y SERVICIOS</a>
-                
-                <ul class="despHorizontal">
-                    <li><a href="../../productosServicios/paquetes.html"><img src="../../imagenes/paquetes-150x100.png" ></a> </li>
-                    <li><a href="../../productosServicios/paleteria.html"><img src="../../imagenes/paleteria-150x100.png" ></a></li>
-                    <li><a href="../../productosServicios/farma.html"><img src="../../imagenes/farma-150x100.png" ></a> </li>
-                    <li><a href="../../productosServicios/grupajes.html"><img src="../../imagenes/grupajes.png" ></a></li>
-                    <li><a href="../../productosServicios/crossdocking.html"><img src="../../imagenes/cross-150x100.png"></a> </li>
-                    <li><a href="../../productosServicios/logistica.html"><img src="../../imagenes/logistica-150x100.png"></a></li>
+                <ul class="horizontal">
+                    <div class="horizontal2">
+                    <li><a href="../productosServicios/paquetes.html"><img src="../imagenes/paquetes-150x100.png" ></a> </li>
+                    <li><a href="../productosServicios/paleteria.html"><img src="../imagenes/paleteria-150x100.png" ></a></li>
+                    <li><a href="../productosServicios/farma.html"><img src="../imagenes/farma-150x100.png" ></a> </li>
+                    <li><a href="../productosServicios/paquetes.html"><img src="../imagenes/grupajes.png" ></a> </li>
+                    <li><a href="../productosServicios/crossdocking.html"><img src="../imagenes/cross-150x100.png"></a> </li>
+                    <li><a href="../productosServicios/logistica.html"><img src="../imagenes/logistica-150x100.png"></a></li>
+                </div>
                 </ul>
                 
             </li>
 
             <li><a href="../../delegaciones/delegaciones.html">DELEGACIONES</a> </li>
 
-            <li><a href="../../areaClientes/areaClientes.html">ÁREA DE CLIENTES</a>
+            <li><a href="">ÁREA DE CLIENTES</a>
                 <ul class="submenu">
-                    <li><a href="../../areaClientes/apweb/facturacionDeClientes.html">FACTURACIÓN DE CLIENTES</a> </li>
-                    <li><a href="../../areaClientes/apweb/grabacionRecogidas.html">GRABACIÓN DE RECOGIDAS</a> </li>
-                    <li><a href="../../areaClientes/apweb/seguimientoEnvios.html">SEGUIMIENTO DE ENVÍOS</a> 
+                    <li><a href="http://81.46.202.4:8083/Facturacion/login.php" target="_blank">FACTURACIÓN DE CLIENTES</a> </li>
+                    <li><a href="http://81.46.202.4:8083/WebRecogidas/login.php" target="_blank">GRABACIÓN DE RECOGIDAS</a> </li>
+                    <li><a href="">SEGUIMIENTO DE ENVÍOS</a> 
                         <ul class="desplegable">
-                            <li><a href="../../areaClientes/apweb/clienteRegistrado.html">CLIENTE REGISTRADO</a> </li>
-                            <li><a href="../../areaClientes/apweb/clienteNoRegistrado.html">CLIENTE NO REGISTRADO</a> </li>
+                            <li><a href="http://81.46.202.4:8083/seguimiento/" target="_blank">CLIENTE REGISTRADO</a> </li>
+                            <li><a href="http://81.46.202.4:8083/transporteslapuente/v3/referencia" target="_blank">CLIENTE NO REGISTRADO</a> </li>
                         </ul>        
                     </li>
             
@@ -89,122 +90,164 @@
     <h1>Trabaja con nosotros</h1>
 
 
-
-
-
-    <form id="jobApplicationForm" action="procesarFormulario.php" method="POST" enctype="multipart/form-data">
-        <div>
-            <label for="nombre">Nombre y Apellidos:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos">
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Tu email">
-        </div>
-        <div>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
-        </div>
-        <div>
-            <label for="provincia">Provincia:</label>
-            <select id="provincia" name="provincia" required>
-                <option value="">Selecciona tu provincia</option>
-                <option value="ACoruña">A Coruña</option>
-                <option value="Madrid">Alava</option>
-                <option value="Madrid">Albacete</option>
-                <option value="Madrid">Alicante</option>
-                <option value="Madrid">Almería</option>
-                <option value="Madrid">Asturias</option>
-                <option value="Madrid">Ávila</option>
-                <option value="Madrid">Badajoz</option>
-                <option value="Madrid">Baleares</option>
-                <option value="Madrid">Barcelona</option>
-                <option value="Madrid">Burgos</option>
-                <option value="Madrid">Cáceres</option>
-                <option value="Madrid">Cádiz</option>
-                <option value="Barcelona">Cantabria</option>
-                <option value="Valencia">Castellón</option>
-                <option value="Sevilla">Ceuta</option>
-                <option value="Zaragoza">Ciudad Real</option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-                <option value=></option>
-
-            </select>
-        </div>
-        <div>
-            <label for="nivelEstudios">Nivel de Estudios:</label>
-            <select id="nivelEstudios" name="nivelEstudios" required>
-                <option value="">Selecciona tu nivel de estudios</option>
-                <option value="Licenciatura">Licenciatura</option>
-                <option value="ESO">ESO</option>
-                <option value="Estudios Secundarios">Estudios Secundarios</option>
-                <option value="Otros Estudios">Otros Estudios</option>
-                <option value="Otros">Otros</option>
-            </select>
-        </div>
-        <div>
-            <label for="areaFuncional">Área Funcional:</label>
-            <select id="areaFuncional" name="areaFuncional" required>
-                <option value="">Selecciona tu área funcional</option>
-                <option value="Contabilidad">Contabilidad</option>
-                <option value="Ventas">Ventas</option>
-                <option value="Tráfico">Tráfico</option>
-                <option value="Administración Tráfico">Administración Tráfico</option>
-                <option value="Atención Cliente">Atención Cliente</option>
-                <option value="Operativa Almacén">Operativa Almacén</option>
-                <option value="Conductor">Conductor</option>
-                <option value="Mantenimiento">Mantenimiento</option>
-                <option value="Otros">Otros</option>
-            </select>
-        </div>    
-        <div>
-            <label for="tipoContrato">Tipo de Contrato:</label>
-            <select id="tipoContrato" name="tipoContrato" required>
-                <option value="">Selecciona el tipo de contrato</option>
-                <option value="Tiempo Completo">Tiempo Completo</option>
-                <option value="Tiempo Parcial">Tiempo Parcial</option>
-                <option value="Contrato Temporal">Contrato Temporal</option>
-                <option value="Formación">Formación</option>
-                <option value="Becario/Prácticas">Becario/Prácticas</option>
-            </select>
-        </div>
-        <div>
-            <label for="cv">Adjuntar CV:</label>
-            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-        </div>
-        <div>
-            <input type="checkbox" id="privacidad" name="privacidad" required>
-            <label for="privacidad">Acepto las <a href="../../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
-        </div>
-        <div>
-            <button type="submit" id="submitButton" disabled>Enviar</button>
-        </div>
-    </form>
+   
+    <h4>Recorre tu camino con nosotros</h4>
+  
 
 
 
 
+   <!-- <div class="contenedorVertical"> -->
+
+    
+
+       <div class="contenedorHorizontal"> 
+
+            <div class="imagenes">
+
+                <p>En Transportes Lapuente, valoramos el talento y la dedicación de nuestros empleados. Ofrecemos un entorno de trabajo dinámico y oportunidades de desarrollo profesional. Si estás buscando un lugar donde crecer y contribuir a un equipo apasionado, ¡este es tu sitio!</p>
+                <p>¡Únete a nosotros y forma parte de una empresa en constante evolución!</p>
+
+                <img src="../../imagenes/rutaapaisada2.jpg" class="ruta" alt="Ruta en entretiempo">
+                <img src="../../imagenes/rutaapaisada3.jpg" class="ruta" alt="Ruta en verano">
+                <img src="../../imagenes/ruta1apaisada.jpg" class="ruta" alt="Ruta en invierno">
+
+            </div>  
 
 
 
+
+            <form id="jobApplicationForm" action="procesarFormulario.php" method="POST" enctype="multipart/form-data">
+               
+                <div>
+                    <label for="nombre">Nombre y Apellidos:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Tu email">
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
+                </div>
+                <div>
+                    <label for="provincia">Provincia:</label>
+                    <select id="provincia" name="provincia" required>
+                        <option value="">Selecciona tu provincia</option>
+                        <option value="acoruña">A Coruña</option>
+                        <option value="alava">Alava</option>
+                        <option value="albacete">Albacete</option>
+                        <option value="alicante">Alicante</option>
+                        <option value="almería">Almería</option>
+                        <option value="asturias">Asturias</option>
+                        <option value="avila">Ávila</option>
+                        <option value="badajoz">Badajoz</option>
+                        <option value="baleares">Baleares</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="burgos">Burgos</option>
+                        <option value="cáceres">Cáceres</option>
+                        <option value="cádiz">Cádiz</option>
+                        <option value="cantabria">Cantabria</option>
+                        <option value="castellón">Castellón</option>
+                        <option value="ceuta">Ceuta</option>
+                        <option value="ciudadReal">Ciudad Real</option>
+                        <option value="cordoba">Córdoba</option>
+                        <option value="cuenca">Cuenca</option>
+                        <option value="girona">Girona</option>
+                        <option value="granada">Granada</option>
+                        <option value="guadalajara">Guadalajara</option>
+                        <option value="guipuzcoa">Guipuzcoa</option>
+                        <option value="huelva">Huelva</option>
+                        <option value="huesca">Huesca</option>
+                        <option value="jaen">Jaen</option>
+                        <option value="laRioja">La Rioja</option>
+                        <option value="lasPalmas">Las Palmas</option>
+                        <option value="leon">León</option>
+                        <option value="lleida">Lleida</option>
+                        <option value="lugo">Lugo</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="malaga">Málaga</option>
+                        <option value="melilla">Melilla </option>
+                        <option value="murcia">Murcia</option>
+                        <option value="navarra">Navarra</option>
+                        <option value="ourense">Ourense</option>
+                        <option value="palencia">Palencia</option>
+                        <option value="pontevedra">Pontevedra</option>
+                        <option value="salamanca">Salamanca</option>
+                        <option value="tenerife">Tenerife</option>    
+                        <option value="segovia">Segovia</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="soria">Soria</option>
+                        <option value="tarragona">Tarragona</option>
+                        <option value="teruel">Teruel</option>
+                        <option value="toledo">Toledo</option>
+                        <option value="valencia">Valencia</option>
+                        <option value="valladolid">Valladolid</option>
+                        <option value="vizcaya">Vizcaya</option>
+                        <option value="zamora">Zamora</option>
+                        <option value="zaragoza">Zaragoza</option>    
+
+                    </select>
+                </div>
+                <div>
+                    <label for="nivelEstudios">Nivel de Estudios:</label>
+                    <select id="nivelEstudios" name="nivelEstudios" required>
+                        <option value="">Selecciona tu nivel de estudios</option>
+                        <option value="Licenciatura">Licenciatura</option>
+                        <option value="ESO">ESO</option>
+                        <option value="Estudios Secundarios">Estudios Secundarios</option>
+                        <option value="Otros Estudios">Otros Estudios</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="areaFuncional">Área Funcional:</label>
+                    <select id="areaFuncional" name="areaFuncional" required>
+                        <option value="">Selecciona tu área funcional</option>
+                        <option value="Contabilidad">Contabilidad</option>
+                        <option value="Ventas">Ventas</option>
+                        <option value="Tráfico">Tráfico</option>
+                        <option value="Administración Tráfico">Administración Tráfico</option>
+                        <option value="Atención Cliente">Atención Cliente</option>
+                        <option value="Operativa Almacén">Operativa Almacén</option>
+                        <option value="Conductor">Conductor</option>
+                        <option value="Mantenimiento">Mantenimiento</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>    
+                <div>
+                    <label for="tipoContrato">Tipo de Contrato:</label>
+                    <select id="tipoContrato" name="tipoContrato" required>
+                        <option value="">Selecciona el tipo de contrato</option>
+                        <option value="Tiempo Completo">Tiempo Completo</option>
+                        <option value="Tiempo Parcial">Tiempo Parcial</option>
+                        <option value="Contrato Temporal">Contrato Temporal</option>
+                        <option value="Formación">Formación</option>
+                        <option value="Becario/Prácticas">Becario/Prácticas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cv">Adjuntar CV:</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                </div>
+
+
+
+                  <div class="pieForm"> 
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">Acepto las <a href="../../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
+                 </div> 
+                 <div>  
+                    <button type="submit" id="submitButton" disabled>Enviar</button>
+                </div>
+            </form>
+
+       </div>     
+
+<!--</div> -->
+
+      
 
     
 
@@ -246,7 +289,7 @@
 
         <div class="copyright">
             <p>COPYRIGHT &copy; 2017-2025 | TRANSPORTES LAPUENTE</p>
-            <p><a href="../../politicas/aviso-legal.html">Aviso legal</a> | <a href="../../politicas/aviso-legal.html">Política de protección de datos</a> | <a href="../../politicas/politica-de-cookies.html">Política de Cookies</a></p>
+            <p><a href="../../politicas/aviso-legal.html">Aviso legal</a> | <a href="../../politicas/aviso-legal.html">Política de protección de datos</a> | <a href="../../politicas/politica-de-cookies.html">Política de Cookies</a> | <a href="../politicas/canalEtico.html" target="_blank">Canal Ético</a></p>
 
         </div>
       

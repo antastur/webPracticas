@@ -60,4 +60,3 @@ setInterval(showNextImage, 6000); // Cambia de imagen cada 6 segundos
 
 });
 
-

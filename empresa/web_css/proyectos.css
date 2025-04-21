@@ -19,9 +19,8 @@
       margin-bottom: 80px;
     }
 
-    p{
+    .parrafo {
       font-size: 100%;
-      
       margin: 50px;
       padding: 0px;
     }
@@ -54,4 +53,9 @@
      
     }
 
-   
+   .proyecto{   
+        
+        width:100%;
+        margin-top: 5px;
+      }
+  
