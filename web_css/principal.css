@@ -134,7 +134,7 @@ li {
 }
 
 
- 
+ /* Estilo para el menú de navegación.Marcar en rojo bordes al pasar cursor */
 .menuNav > li:hover{
   border-top: #c50808de 5px solid;
   border-bottom: #c50808de 5px solid;
@@ -152,7 +152,7 @@ li {
     min-width: 200px;
   }  
 
-
+/* Estilo para mostrar submenú (desplegable) al pasar cursor */
   li:hover > ul {
     display: block;
   }
@@ -177,6 +177,7 @@ li {
     color:#c50808de;
   }
 
+  /* Estilo para el submenú (desplegable) que quede por encima de opciones anteriores de menú*/
   .submenu{
     z-index: 999;
   }
@@ -409,10 +410,24 @@ footer p{
   display: none;
 }
 
+
+
+/*----------------------------------------------AJUSTES PARA DISPOSITIVOS MÓVILES----------------------------------------------*/
+
+
+
+
+
+
+
 @media (max-width: 480px) {
  
-  /* Estilo para el menú principal en pantallas pequeñas */
+
+
+  /* ----------------------------Estilo para el menú principal en pantallas pequeñas --------------------------------*/
+
   
+
   .menuNav {
     display: none; /* Oculto por defecto */
     flex-direction: column; /* Cambia a diseño vertical */
@@ -451,7 +466,7 @@ footer p{
   color:#ffffff;
 }
 
-/* Estilo para el ícono de hamburguesa */
+/* ----------------------------------Estilo para el ícono de hamburguesa ----------------------------*/
 .hamburger {
   display: block;
   font-size: 24px;
@@ -466,7 +481,13 @@ footer p{
   z-index: 1001;
 }
 
-/* Mostrar el menú cuando el checkbox está activado */
+/* ----------------------------------Ocultar el checkbox ----------------------------------------------*/
+.input {
+  display: none;
+}
+
+
+/*-------------------------- Mostrar el menú cuando el checkbox está activado--------------------------- */
 .input:checked ~ .menuNav {
   display: flex; /* Muestra el menú */
 }
@@ -477,10 +498,11 @@ footer p{
   color:#007bff ;
 }
 
-/* Ocultar el checkbox */
-.input {
-  display: none;
-}
+
+/*-------------------------- configuración de submenus--------------------------- */
+
+
+
 
 .submenu{
   display: none;
@@ -509,7 +531,7 @@ footer p{
 
 .horizontal{
   display:none;
-  width:90vw; 
+  width:100%; 
   margin-top: 0px;
   padding-top: 0px; 
   position: absolute;
@@ -520,34 +542,43 @@ footer p{
  
 }
 
-.horizontal2 img{
-  
-  
-  margin-left: 0px;
-  width: 60px;
-}
-
-.horizontal li{
-  background-color: #007bff ;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  border-radius: 10px;
-  height: 80px;
-  width: 80px;
-  text-align: left;
-  
- 
-}
-
   
 .horizontal2{
   display:flex;
-  height: 80px;
-  width: 90vw;
+  width: 150%;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   z-index: 1001;
 }
+
+.horizontal2 li{
+  background-color: #007bff ;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 5px;  
+  padding-right: 5px;
+  border-radius: 10px;
+  height: 120px;
+  width: 120px;
+ 
+}
+
+.horizontal2 a{
+padding:0%;
+margin:0%;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.horizontal2 img{
+
+  width: 100%;
+  height: auto;
+ 
+}
+
 .desplegable{
   /*display: none;*/
   position: absolute;

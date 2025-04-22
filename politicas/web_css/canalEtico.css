@@ -10,6 +10,216 @@
     text-align: center;
     padding: 80px;
     margin: 0px;
+     }
+
+h2{
+  color:red;
+}
+
+p{
+  text-align: justify;;
+}
+
+a{
+  color:white
+}
+
+a:hover{
+  text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff, 0px 0px 20px #ffffff, 0px 0px 25px #ffffff, 0px 0px 30px #ffffff, 0px 0px 35px #ffffff;     
+}
+
+
+     /*---------------------------cabecera----------------------------*/
+  
+
+
+     .cabecera{
+      position:relative;
+      background-color: rgba(5, 5, 177, 0.808);
+      color: #ffffff;
+      margin-top: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 100%;
+      text-align: center;
+      border-radius: 10px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      gap:20px;
+     }
+
+
+     .cabecera ul{
     
+      width: 90px;
+      background-color: rgba(5, 5, 177, 0.808);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      list-style: none;
+      z-index: 1001;
+     
+     }
+
+     
+
+     .cabecera ul:hover li{
+      display: block;
+     }
+      
+     
+
+     .idiomas{
+      background-color:rgba(5, 5, 177, 0.808);
+      position:absolute;
+      border-radius: 20px;
+      top: 0;
+      right:0;
+      width: 100px;
+     }
+
+
+     li{
+      display:none;
+      margin-top: 10px;
+    
+     }
+
+
+
+
+     .titulo{
+      
+      display: flex;  
+    
+      justify-content: start;
+      align-items: baseline;
+      gap: 20px;
+      
+     }
+
+     .contenedor{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: strecht;
+      gap: 20px;
+      margin-top: 10px;
+      padding: 20px;
+      flex-wrap: wrap;
+     }
+
+     .izquierda{
+      display:flex;
+      width:40%;
+      flex-direction: column;
+      justify-content: space-between;
+     }
+
+
+     .derecha{
+      display:flex;
+      width: 40%;
+      flex-direction: column;
+      justify-content:space-evenly;
+     }
+
+
+     .derecha a{
+      background-color:#a5bff7 ;
+      color: rgba(5, 5, 177);
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      border:rgba(5, 5, 177) 2px solid;
+      margin-top: 10px;
+      font-size: 20px;
+     }
+
+     .desp{
+      color: black;
+      
+     
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+  }
+
+  .desp p:last-child {
+    font-size: 30px; /* Ajusta el tamaño del símbolo + */
+    font-weight: bold; /* Asegura que sea más grueso */
+    margin: 0; /* Elimina márgenes adicionales */
+   
+}
+
+
+.boton1{
+    background-color: rgb(5, 5, 177,0.1);
+    color: rgba(5, 5, 177);
+    border-color:rgba(5, 5, 177) 2px solid;
+    border-radius: 25px;
+    padding:20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.boton1:hover{
+  background-color: rgb(7, 7, 228);
+  color:white;
+  text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff, 0px 0px 20px #ffffff, 0px 0px 25px #ffffff, 0px 0px 30px #ffffff, 0px 0px 35px #ffffff;
+}
+
+
+.boton2{
+  background-color: rgba(19, 153, 31, 0.1);
+  color: rgb(19, 153, 31);
+  border-color:rgb(19, 153, 31) 2px solid;
+  border-radius: 25px;
+  padding:20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  cursor: pointer;
+  
+}
+
+.boton2:hover{
+background-color: rgb(19, 153, 31) ;
+color:white;
+text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff, 0px 0px 20px #ffffff, 0px 0px 25px #ffffff, 0px 0px 30px #ffffff, 0px 0px 35px #ffffff;
+}
+
+
+
+    .ing{
+      display:none;
     }
+
+    .cat{
+      display:none;
+    }
+
+    .fra{
+      display:none;
+    }
+
+    .gal{
+      display:none;
+    }
+
+
+    .neer{
+      display:none;
+    }
+
+    .eus{
+      display:none;
+    }
+
   
