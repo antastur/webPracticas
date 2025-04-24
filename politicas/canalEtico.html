@@ -151,28 +151,62 @@
 
 
 
-                    </div>            
+    </div>            
 
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
+<h3>INFORMACIÓN A COMUNICAR</h3>
 <div class="totalForm">
 
-                <div class="conf">
+        <div class="conf">
 
-                    <h3>INFORMACIÓN A COMUNICAR</h3>
-                    
+             <h3>Informar un caso</h3>
+                <div class="confSi">
+                        <label>
+                            <input type="radio" id="confidencial" name="confidencial" value="confidencial" required>
+                            Informe confidencialmente
+                        </label>
+                        <p>Puede optar por denunciar de forma confidencial. Su identidad solo será conocida por aquellos que manejen su caso de manera confidencial, y su identidad aparecerá como</p>
+                        <button class="botonMas" id="botonMas1">Mostrar más</button>
+                        <div class="mas">
+                            <p>Su identidad no será revelada a otros dentro de la organización sin su consentimiento al presente. Solo se solicitará su aceptación de la franqueza sobre su identidad si es necesario para el procesamiento interno del caso.</p>
+                            <p>Cuando utiliza el sistema de denuncia de irregularidades de forma confidencial, su caso y usted quedarán registrados, lo que significa que puede documentar cualquier derecho de protección en virtud de la legislación de denuncia de irregularidades desde el primer contacto realizado.</p>
+                            <p>Siempre se recomienda utilizar la opción de informes confidenciales, ya que proporciona el mejor procesamiento de casos posible y le garantiza la mejor protección posible.</p>
+                        </div>    
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="confNo">
+
+                        <label>
+                            <input type="radio" id="anonimo" name="anonimo" value="anonimo">
+                            Informe anónimamente
+                        </label>
+                        <P>Puede optar por denunciar de forma anónima si prefiere no proveer su identidad a nadie en el proceso.</P>
+                        <button class="botonMas" id="boton2">Mostrar más</button>
+                        
+                        <div class="mas">
+                            <p>Al denunciar de manera anónima, puede resultarle difícil en una fecha posterior invocar la protección de la legislación sobre denuncia de irregularidades.</p>
+                            <p>Si opta por denunciar de forma anónima, debe asegurarse de no dejar ningún rastro electrónico en el proceso. Busque metadata en los archivos que cargue y no use este sistema a través de una computadora o teléfono móvil proporcionado por su empleador. De esa manera, tendrá la mejor protección posible como denunciante anónimo.</p>
+                            <p>Se recomienda denunciar de forma confidencial, ya que le garantiza la mejor protección posible.</p>
+                        </div>  
+                </div>
+        
+
+
+
+
+
+        </div>       
+
+
+
+       <!--             
                     <h4>Informar de un caso</h4>
 
                     <div class="confSi">
@@ -215,9 +249,26 @@
 
                 </div>
 
+      
 
-  
-       <div class="form1">       
+
+            <div class="conf2">
+                <label for="confidencialidadSi">Informe confidencialmente</label>
+                <input type="radio" id="confidencialidadSi" name="confidencialidadSi" value="confidencial" checked>
+                <p>Puede optar por denunciar de forma confidencial. Su identidad solo será conocida por aquellos que manejen su caso de manera confidencial, y su identidad aparecerá como</p>
+            </div>
+
+            <div class="conf3">
+                <label for="confidencialidadNo">Informe anónimamente</label>
+                <input type="radio" id="confidencialidadNo" name="confidencialidadNo" value="anónimo" checked>
+                <P>Puede optar por denunciar de forma anónima si prefiere no proveer su identidad a nadie en el proceso.</P>
+            </div>
+       
+        -->        
+
+    <form action="ruta del servidor" method="post" enctype="multipart/form-data" >      
+
+    <div class="form1">       
 
 
 
@@ -253,10 +304,73 @@
                 <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aaaa">
             </div>
 
-           
-
-
+            <div>
+                <label for="relacion">Tipo de relación</label>
+                <select id="relacion" name="relacion">
+                    <option value="externo">Externo</option>
+                    <option value="interno">Interno</option>
+                </select>
+            </div>
             
+            <div>
+                <label for="tipologia">Tipología de la conducta a comunicar conforme a la Ley 2/2023</label>
+                <select id="tipologia" name="tipologia">
+                    <option value="acoso">Acoso laboral o sexual</option>
+                    <option value="blanqueo">Blanqueo de capitales o financiación de terrorismo</option>
+                    <option value="cohecho">Cohecho</option>
+                    <option value="conflicto">Conflicto de intereses</option>
+                    <option value="contratacion">Contratación pública</option>
+                    <option value="corrupcion">Corrupción pública o privada</option>
+                    <option value="delito">Delito contra la protección integral de la infancia y la adolescencia frente a la violencia Ley 08/2021</option>
+                    <option value="integridad">Integridad moral o los derechos humanos</option>
+                    <option value="intereses">Intereses financieros de la Unión y mercado interior</option>
+                    <option value="competencia">Libre competencia</option>
+                    <option value="trafico">Tráfico de influencias</option>
+                    <option value="infraccion">Otras infracciones penales</option>
+                    <option value="prevención">Prevención de riesgos laborales</option>
+                    <option value="propiedad">Propiedad industrial o intelectual</option>
+                    <option value="privacidad">Protección de privacidad de datos personales,seguridad de las redes y sistemas de información</option>
+                    <option value="consumidor">Protección de los consumidores</option>
+                    <option value="ambiente">Protección del medio ambienteas</option>
+                    <option value="radiacion">Protección frente a radiaciones y seguridad nuclear</option>
+                    <option value="salud">Salud pública</option>
+                    <option value="alimentos">Seguridad de los alimentos y piensos, sanidad y bienestar animal</option>
+                    <option value="transporte">Seguridad del transporte</option>
+                    <option value="comercio">Seguridad y conformidad de los productos comercializados</option>
+                    <option value="servicio">Servicios,productos y mercados financieros</option>
+                    <option value="subvenciones">Subvenciones, Hacienda Pública, Seguridad Social</option>
+
+                </select>
+            </div>
+
+
+            <div>
+                <label for="descripcion">Descripción de la posible infracción</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Describa la posible infracción aquí..." rows="10" cols="100"></textarea>
+            </div>
+
+            <div>
+                <label for="adjunto">Adjuntar archivo</label>
+                <input type="file" id="adjunto" name="adjunto" accept=".pdf,.doc,.docx,.jpg,.png">
+            </div>
+
+            <div class="check">
+                
+            <div>
+                <label>
+                    <input type="checkbox" id="renuncioNotificaciones" name="renuncioNotificaciones">
+                    Renuncio a recibir notificaciones (Artículo 17)
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id="heLeidoCondiciones" name="heLeidoCondiciones" required>
+                    He leído y acepto las condiciones sobre protección de datos
+                </label>
+            </div>
+            </div>
+
+            <button type="submit" class="boton3">Enviar</button>
 
 
 
@@ -266,18 +380,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-       </div>  
-
+     </div>  
+    </form>
 
 </div>    
 

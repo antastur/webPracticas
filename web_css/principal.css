@@ -275,10 +275,11 @@ footer{
   display:flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;  
+  align-items: stretch;  
   flex-wrap: wrap;
   margin-top: 120px;
   padding-top: 50px;
+ 
 
 }
 
@@ -290,38 +291,27 @@ footer p{
 .pie{
   display:flex;
   flex-direction: row;
-  justify-content:space-around;
-  align-items: flex-start;
-  width: 90%;
-  padding: 20px;
+  justify-content:center;
+  width: 100%;
   flex-wrap: wrap;
   text-align: justify;
+  gap:20px;
 }
 
 
-/*
- .pie2{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  background-color: sandybrown; 
- } 
-*/
-.pie > div{
-  box-sizing: border-box;
-  width:50%;
-  padding: 60px;  
-  }
-
   .pie1{
-    min-width: 400px;
+    width:40%;
+    min-width: 300px;
     margin-top: 5px;
+    padding: 20px;
+   
   }
 
   .pie2{
-    min-width: 400px;
+    width:40%;
+    min-width: 300px;
     margin-top: 5px;
+    padding: 20px;
   }
 
 .pie2 h3{
