@@ -17,6 +17,16 @@ h2{
   text-align: center;
 }
 
+h3{
+  color: #ffffff;
+  margin-left:20px;
+  }
+
+  h4{
+    color: #007bff;
+    margin-left:20px;
+    
+  }
 p{
   text-align: justify;
 }
@@ -96,7 +106,7 @@ a:hover{
       font-size: 20px;
       padding: 10px;
       border-radius: 5px;
-      border:rgba(5, 5, 177) 2px solid;
+      font-size: 80%;
      } 
 
 /*-------------------------------------------------------contenedor-----------------------------------------*/
@@ -152,14 +162,17 @@ a:hover{
 
 
      .derecha a{
+      width:70%;
+      min-width: 240px;
       background-color:#a5bff7 ;
       color: rgba(5, 5, 177);
       text-decoration: none;
       padding: 10px;
       border-radius: 5px;
-      border:rgba(5, 5, 177) 2px solid;
+     border:rgba(5, 5, 177) 2px solid;
       margin-top: 10px;
       font-size: 20px;
+      align-self: center;
      }
 
      .desp{
@@ -184,8 +197,8 @@ a:hover{
 
 .boton1{
     background-color: rgb(5, 5, 177,0.1);
-    width: 80%;
-    min-width: 100px;
+    width: 70%;
+    min-width: 200px;
     color: rgba(5, 5, 177);
     border-color:rgba(5, 5, 177) 2px solid;
     border-radius: 25px;
@@ -207,8 +220,8 @@ a:hover{
 
 .boton2{
   background-color: rgba(19, 153, 31, 0.1);
-  width: 80%;
-  min-width: 100px;
+  width: 70%;
+  min-width: 200px;
   color: rgb(19, 153, 31);
   border-color:rgb(19, 153, 31) 2px solid;
   border-radius: 25px;
@@ -225,20 +238,27 @@ color:white;
 text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff, 0px 0px 20px #ffffff, 0px 0px 25px #ffffff, 0px 0px 30px #ffffff, 0px 0px 35px #ffffff;
 }
 
-.boton3{
-  background-color: rgba(19, 153, 31, 0.1);
-  width: 80%;
-  min-width: 100px;
-  color: rgb(19, 153, 31);
-  border-color:rgb(19, 153, 31) 2px solid;
-  border-radius: 25px;
-  padding:20px;
-  margin-left: 100px;
-  margin-right: 100px;
-  cursor: pointer;
- 
-}
 
+ .botonMas{
+    background-color: rgba(255, 255, 255, 0);
+    width: 25%;
+    min-width: 100px;
+    color: rgb(19, 153, 31);
+    border-color:rgb(19, 153, 31) 2px solid;
+    border-radius: 25px;
+    padding:20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    cursor: pointer;
+    align-self: end;
+    
+ }
+
+ .botonMas:hover{
+  background-color: rgb(19, 153, 31) ;
+  color:white;
+  text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff, 0px 0px 20px #ffffff, 0px 0px 25px #ffffff, 0px 0px 30px #ffffff, 0px 0px 35px #ffffff;
+  }
     .ing{
       display:none;
     }
@@ -271,15 +291,129 @@ text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff, 0p
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    align-items: start;
+   
+    margin-top: 20px;
+  background-color: rgba(227, 227, 235, 0.466);
+    padding: 20px;
+    border-radius: 10px;  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .conf{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: rgba(231, 231, 233, 0.808);
+    padding: 20px;
+    border-radius: 10px;  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    gap:50px;
+  }
+
+
+  .confSi{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:start;
     margin-top: 20px;
     background-color: rgba(231, 231, 233, 0.808);
     padding: 20px;
     border-radius: 10px;  
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
+   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    gap:50px;
+    
   }
+
+  .confNo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: rgba(231, 231, 233, 0.808);
+    padding: 20px;
+    border-radius: 10px;  
+   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    gap:50px;
+    
+  }
+
+ .mas{
+    display:none;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    gap:50px;
+    
+  }
+
+  form{
+    width:100%;
+  }
+
+  .form1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 20px;
+    background-color: rgba(231, 231, 233, 0.808);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    
+  }
+
+  .form1 input{
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+
+  .form1 div{
+   
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 30px; 
+    width: 100%;
+    margin-top: 20px;
+    
+
+    
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
   .check{
     display:flex;
