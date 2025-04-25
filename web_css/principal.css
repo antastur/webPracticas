@@ -308,6 +308,7 @@ footer p{
   }
 
   .pie2{
+    
     width:40%;
     min-width: 300px;
     margin-top: 5px;
@@ -322,6 +323,7 @@ footer p{
 
 
 .pie div{
+
   padding-top: 5px;
   
 }
@@ -343,7 +345,7 @@ footer p{
   align-items: center;
   flex-wrap: wrap;
   margin-right: 40px;
-  
+  width:100%;
 }
 
 .contacto a{

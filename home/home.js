@@ -31,6 +31,14 @@ if (cookiesAccepted === "true") {
     // Si las cookies fueron aceptadas, no muestra la ventana ni el overlay
     cookiePopup.style.display = "none";
     cookieOverlay.style.display = "none";
+
+    document.cookie = "cookie_notice_accepted=false; " +
+                  "expires=Sat, 03 May 2025 06:54:57 GMT; " +
+                  "domain=transporteslapuente.com; " +
+                  "path=/; " +
+                  "secure; " +
+                  "samesite=None";
+
 } else {
     // Si no hay decisión previa o si las cookies fueron rechazadas, muestra la ventana y el overlay
     cookiePopup.style.display = "flex";
