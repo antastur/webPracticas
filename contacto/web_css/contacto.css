@@ -100,21 +100,34 @@
     min-width: 200px;
     text-align: justify;
    }
-
+/*
    iframe{
     box-sizing: border-box;
    width: 280px; 
    height: 280px;
    padding: 20px;
-   /*border: rgba(5, 5, 177, 0.808) 5px solid;*/
+   /*border: rgba(5, 5, 177, 0.808) 5px solid;
    border: rgba(187, 35, 14, 0.808) 5px solid;  
    border-radius: 5%;
    margin-bottom: 30px;
    
    }
+*/
 
+.map{
+  box-sizing: border-box;
+ width: 280px; 
+ height: 280px;
+ padding: 20px;
+ /*border: rgba(5, 5, 177, 0.808) 5px solid;*/
+ border: rgba(187, 35, 14, 0.808) 5px solid;  
+ border-radius: 5%;
+ margin-bottom: 30px;
+ 
+ }
 
   form {
+     
       width:40%;
       min-width: 400px;
       height: 700px;
@@ -184,6 +197,22 @@
   /*  align-self: center;  Elimina márgenes adicionales del checkbox */
 }
 
+.reccentrado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  z-index: 1010; /* Asegura que esté por encima de todo */
+  background-color: white; /* Opcional: agrega un fondo blanco si es necesario */
+  padding: 10px; /* Opcional: agrega espacio alrededor */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra */
+}
+
+
+
+
+/*
 .formFooter{
     display: flex;
     flex-direction: column;

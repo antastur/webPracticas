@@ -7,6 +7,8 @@
     <script src="web_js/principal.js"></script>
     <link rel="stylesheet" href="../web_css/principal.css">
     <link rel="stylesheet" href="web_css/contacto.css">
+    <script src="/contacto/web_js/contacto.js"></script>
+   
 </head>
 <body>
     <nav class="menu">
@@ -119,7 +121,7 @@
         <p>Si tienes alguna duda o consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de ayudarte.</p>
     </div>
  <!--  <div class="map"> --> 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1526690.3158267306!2d-1.0095835937500008!3d41.6380863545091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406787c7f4e85e59%3A0x5b1c9a31265d8a41!2sTransportes%20Lapuente!5e0!3m2!1ses!2ses!4v1744185207719!5m2!1ses!2ses" width="600" height="450"></iframe>  
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1526690.3158267306!2d-1.0095835937500008!3d41.6380863545091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406787c7f4e85e59%3A0x5b1c9a31265d8a41!2sTransportes%20Lapuente!5e0!3m2!1ses!2ses!4v1744185207719!5m2!1ses!2ses" width="600" height="450"></iframe>  
  <!--  </div>    --> 
 
   
@@ -139,7 +141,8 @@
 </div>
     
 
-    <form id="contactForm" action="/contacto/#wpcf7-f1282-p308-01" method="POST" novalidate="novalidate" data-status="init">
+    <form id="contactForm" action="../sendmail.php" method="POST" >
+        
         <div>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
@@ -156,31 +159,35 @@
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
         </div>
-        <div class="formFooter">
-        <div >
-            <input type="checkbox" id="privacidad" name="privacidad" required>
-            <label for="privacidad">Acepto las <a href="../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
-        </div>
         
+        
+            <div>
+            <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
+            <label for="privacidad">Acepto las <a href="../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
+            </div>
+            
+            
+     
+         
+            <input type="hidden" name="csrf_token" id="csrf_token">
             <button type="submit" >Enviar</button>
         </div>
+
+         <!-- Google reCAPTCHA 
+         <div class="g-recaptcha"  data-sitekey="6LdznykrAAAAAJHZr8vIE78A7ZheYbta4rOnRbrF"></div>
+-->
+    <di class="reccentrado">
+    <div class="g-recaptcha" data-sitekey="6LcqwysrAAAAALeW31bJuAR-Os-2H-FhYuEK8nzH"></div>
+    </div>
+
     </form>
 
-
+    <!-- <div class="formFooter"> -->
 
 
     </div>
 
 
-
-
-
-
-
-
-
-
-    
 
 
     <footer>
@@ -227,5 +234,7 @@
 
 
      </footer>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script src="web_js/contacto.js"></script>
 </body>
 </html>
