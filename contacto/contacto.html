@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contacto</title>
-    <script src="web_js/principal.js"></script>
+   
+    
+    <script src="../web_js/principal.js"></script>
     <link rel="stylesheet" href="../web_css/principal.css">
-    <link rel="stylesheet" href="web_css/contacto.css">
-    <script src="/contacto/web_js/contacto.js"></script>
+    <link rel="stylesheet" href="../contacto/web_css/contacto.css">
+    <script src="/weblapuente/web_js/sweetalert2.js"></script>
+    <script src="/weblapuente/contacto/web_js/contacto.js"></script>
+    
+    
    
 </head>
 <body>
@@ -115,72 +120,71 @@
     </div>    
 
 -->
-<div class="mapa">
-    <div class="texto">
-        <h2>Oficinas centrales</h2>
-        <p>Si tienes alguna duda o consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de ayudarte.</p>
-    </div>
+            <div class="mapa">
+                    <div class="texto">
+                        <h2>Oficinas centrales</h2>
+                        <p>Si tienes alguna duda o consulta, no dudes en ponerte en contacto con nosotros. Estaremos encantados de ayudarte.</p>
+                    </div>
  <!--  <div class="map"> --> 
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1526690.3158267306!2d-1.0095835937500008!3d41.6380863545091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406787c7f4e85e59%3A0x5b1c9a31265d8a41!2sTransportes%20Lapuente!5e0!3m2!1ses!2ses!4v1744185207719!5m2!1ses!2ses" width="600" height="450"></iframe>  
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1526690.3158267306!2d-1.0095835937500008!3d41.6380863545091!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406787c7f4e85e59%3A0x5b1c9a31265d8a41!2sTransportes%20Lapuente!5e0!3m2!1ses!2ses!4v1744185207719!5m2!1ses!2ses" width="600" height="450"></iframe>  
  <!--  </div>    --> 
 
   
-        <div class="tlfn">
-            <img src="../imagenes/phone-call.png"  class="logo2">
-            <p>&nbsp;&nbsp;976&nbsp;47&nbsp;12&nbsp;12</p>
-        </div>
-        <div class="email">
-            <img src="../imagenes/message.png" class="logo2">
-            <p><a href="mailto:info@transportelapuente.com">&nbsp;info@transportelapuente.com</a></p>
-        </div>
+                    <div class="tlfn">
+                        <img src="../imagenes/phone-call.png"  class="logo2">
+                        <p>&nbsp;&nbsp;976&nbsp;47&nbsp;12&nbsp;12</p>
+                    </div>
+                    <div class="email">
+                        <img src="../imagenes/message.png" class="logo2">
+                        <p><a href="mailto:info@transportelapuente.com">&nbsp;info@transportelapuente.com</a></p>
+                    </div>
 
-        <div class="direccion">
-            <img src="../imagenes/donde2.png" class="logo2">
-            <p>Calle M 18  50820 San Juan de Mozarrifar <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ciudad del transporte Zaragoza</p>
-        </div>
-</div>
+                    <div class="direccion">
+                        <img src="../imagenes/donde2.png" class="logo2">
+                        <p>Calle M 18  50820 San Juan de Mozarrifar <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ciudad del transporte Zaragoza</p>
+                    </div>
+            </div>
     
 
-    <form id="contactForm" action="../sendmail.php" method="POST" >
+             <form id="contactForm" action="../sendmail.php" method="POST">
         
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Tu email">
-        </div>
-        <div>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
-        </div>
-        <div>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
-        </div>
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Tu email">
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
+                    </div>
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
+                    </div>
         
         
-            <div>
-            <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
-            <label for="privacidad">Acepto las <a href="../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
-            </div>
+                    <div class="comprobacion">
+                    <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
+                    <label for="privacidad">Acepto las <a href="../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
+                    <div class="reccentrado">
+                        <div class="g-recaptcha" data-sitekey="6LcqwysrAAAAALeW31bJuAR-Os-2H-FhYuEK8nzH"></div>
+                    </div>
+                    </div>
             
-            
-     
-         
-            <input type="hidden" name="csrf_token" id="csrf_token">
-            <button type="submit" >Enviar</button>
-        </div>
+                    
+                    <input type="hidden" name="csrf_token" id="csrf_token">
+                    <button type="submit" >Enviar</button>
+        
 
          <!-- Google reCAPTCHA 
          <div class="g-recaptcha"  data-sitekey="6LdznykrAAAAAJHZr8vIE78A7ZheYbta4rOnRbrF"></div>
 -->
-    <di class="reccentrado">
-    <div class="g-recaptcha" data-sitekey="6LcqwysrAAAAALeW31bJuAR-Os-2H-FhYuEK8nzH"></div>
-    </div>
+                   
 
-    </form>
+            </form>
 
     <!-- <div class="formFooter"> -->
 
@@ -234,7 +238,9 @@
 
 
      </footer>
+   <!-- <script src="web_js/contacto.js"></script> --> 
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script src="web_js/contacto.js"></script>
+   <!-- <script src="/weblapuente/contacto/web_js/contacto.js"></script> -->
+ 
 </body>
 </html>

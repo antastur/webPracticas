@@ -142,9 +142,6 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  form div {
-      margin-bottom: 15px;
-  }
   
   label {
       display: block;
@@ -182,6 +179,7 @@
   }
 
   form div {
+    margin-bottom: 15px;
     display: flex;
     align-items: baseline; /* Alinea verticalmente el checkbox y el texto */
     gap: 10px; /* Espaciado entre el checkbox y el texto */
@@ -197,19 +195,34 @@
   /*  align-self: center;  Elimina márgenes adicionales del checkbox */
 }
 
-.reccentrado {
-  position: absolute;
-  top: 0;
-  left: 0;
+.comprobacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-top: 20px;
+    flex-wrap: wrap;
   
-  z-index: 1010; /* Asegura que esté por encima de todo */
-  background-color: white; /* Opcional: agrega un fondo blanco si es necesario */
-  padding: 10px; /* Opcional: agrega espacio alrededor */
-  border-radius: 5px; /* Opcional: bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra */
 }
 
+    
 
+.reccentrado {
+ 
+  position:relative;
+  height: 80px;
+/* Asegura que esté por encima de todo */
+  background-color: white; /* Opcional: agrega un fondo blanco si es necesario */
+ /* Opcional: agrega espacio alrededor */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra */
+ 
+}
+
+.gcaptcha {
+  position:absolute;
+}
 
 
 /*

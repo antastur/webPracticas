@@ -34,7 +34,12 @@ $response = file_get_contents("{$recaptchaUrl}?secret={$recaptchaSecret}&respons
 $responseData = json_decode($response);
 
 if (!$responseData->success) {
-    die("Verificación de reCAPTCHA fallida.");
+    echo "<script>
+            localStorage.setItem('recaptchaError', 'true');
+            window.location.href = 'contacto/contacto.html';
+    
+        </script>";
+    exit;
 }
 
 //Comprobación de aceptación de condiciones
