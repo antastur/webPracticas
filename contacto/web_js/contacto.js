@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', async function() {
     //Obtener el token CSRF desde el servidor
     try{
-    const response = await fetch('get-csrf-token.php');
+    const response = await fetch('/weblapuente/get-csrf-token.php');
     const data = await response.json();
     document.getElementById('csrf_token').value = data.csrf_token;
     }catch (error) {
@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', async function() {
        
        // Evita la recarga de la página
         event.preventDefault(); 
+
+        const csrfToken = document.getElementById('csrf_token').value;
+        if (!csrfToken) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error de seguridad',
+                text: 'El token CSRF no es válido. Por favor, recarga la página.',
+                confirmButtonText: 'Aceptar'
+            });
+            return;
+        }
+
     
         const formData = new FormData(this);
     
@@ -58,6 +70,15 @@ document.addEventListener('DOMContentLoaded', async function() {
                     text: 'Tu mensaje ha sido enviado correctamente.',
                     confirmButtonText: 'Aceptar'
                 });
+
+                // Actualizar el token CSRF desde el servidor
+                try {
+                    const csrfResponse = await fetch('/weblapuente/get-csrf-token.php');
+                    const csrfData = await csrfResponse.json();
+                    document.getElementById('csrf_token').value = csrfData.csrf_token;
+                } catch (csrfError) {
+                    console.error('Error al actualizar el token CSRF:', csrfError);
+                }
 
                 
                 // Borrar todos los campos del formulario
