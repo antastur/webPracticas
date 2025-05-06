@@ -101,7 +101,7 @@
 
 
     
-    <div class="contenedor">
+    <div class="contenedorContacto">
 
 
 <!--
@@ -170,13 +170,13 @@
                     <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
                     <label for="privacidad">Acepto las <a href="../politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
                     <div class="reccentrado">
-                        <div class="g-recaptcha" data-sitekey="6LcqwysrAAAAALeW31bJuAR-Os-2H-FhYuEK8nzH"></div>
+                        <div class="g-recaptcha" data-sitekey="6LcqwysrAAAAALeW31bJuAR-Os-2H-FhYuEK8nzH" data-callback="recaptchaCallback"></div>
                     </div>
                     </div>
             
                     
                     <input type="hidden" name="csrf_token" id="csrf_token">
-                    <button type="submit" >Enviar</button>
+                    <button type="submit" id="botonEnviar" disabled="true">Enviar</button>
         
 
          <!-- Google reCAPTCHA 

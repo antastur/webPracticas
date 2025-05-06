@@ -35,7 +35,6 @@ $responseData = json_decode($response);
 
 if (!$responseData->success) {
     echo "<script>
-            localStorage.setItem('recaptchaError', 'true');
             window.location.href = 'contacto/contacto.html';
     
         </script>";
@@ -47,9 +46,8 @@ if (!isset($_POST['privacidad'])) {
     die('Debes aceptar la política de privacidad para enviar el formulario.');
 }
 
-//Validación básica
+//Validación básica y sanificación de datos
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
 
     $nombre = htmlspecialchars((trim($_POST['nombre'] )));
     $mail=filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
@@ -61,20 +59,7 @@ if(!$mail){
     die('El email proporcionado no es válido.');
 }
 
-// Validar reCAPTCHA
-/*
-$recaptchaResponse = $_POST['g-recaptcha-response'];
-$secretKey = '6LdznykrAAAAAPCJ2FMDwHlsJItCsqZeGdUSYWob';
-$recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
 
-$response = file_get_contents($recaptchaUrl . '?secret=' . $secretKey . '&response=' . $recaptchaResponse);
-$responseKeys = json_decode($response, true);
-
-if (!$responseKeys['success']) {
-    die('Error de verificación del reCAPTCHA. Por favor, inténtalo de nuevo.');
-}
-
-*/
 //Carga de variables de entorno con libreria vlucas/phpdotenv
 $dotenv=Dotenv\Dotenv::createImmutable('C:/xampp/webLapuente_env');
 $dotenv->load();
@@ -111,7 +96,11 @@ try {
 
     // Envío del mensaje
     $email->send();
-    echo '<p>El mensaje ha sido enviado correctamente.</p>';
+    echo "<script>
+            window.location.href = '/weblapuente/contacto/contacto.html';
+        </script>";
+       
+        exit;
 } catch (Exception $e) {
     echo '<p>El mensaje no se ha podido enviar.</p>';
 }
