@@ -41,7 +41,7 @@ unset($_SESSION['csrf_token']); // opcional: evitar reutilización de CSRF
 unset($_SESSION['csrf_token_expiry']);
 
 // Validar reCAPTCHA    
-$recaptchaSecret = '6LcqwysrAAAAAE5OExizdsYJ5sJ9dpmw0Rdrdlzw';
+$recaptchaSecret = '6LcvYjYrAAAAANWz2ITi7HhmAfzY1zwuz-HndWG8';
 $recaptchaResponse = $_POST['g-recaptcha-response'];
 $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
 $response = file_get_contents("{$recaptchaUrl}?secret={$recaptchaSecret}&response={$recaptchaResponse}");
@@ -72,7 +72,7 @@ if(!$mail){
 */
 
 //Carga de variables de entorno con libreria vlucas/phpdotenv
-$dotenv=Dotenv\Dotenv::createImmutable('C:/xampp/webLapuente_env');
+$dotenv=Dotenv\Dotenv::createImmutable('C:/var/webLapuente_env');
 $dotenv->load();
 
 //Validar campos del formulario
