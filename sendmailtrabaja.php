@@ -12,15 +12,13 @@ require __DIR__.'/vendor/autoload.php';
 // Verificar método POST añadido por CSRF
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    die("Método no permitido.");
+    die(json_encode(['error' => 'Método no permitido.']));
 }
-
-
 
 // Verificar token CSRF
 if (!isset($_POST['csrf_token'], $_SESSION['csrf_token'], $_SESSION['csrf_token_expiry'])) {
     http_response_code(403);
-    die("CSRF token inválido.");
+    die(json_encode(['error' => 'CSRF token inválido. Por favor, recarga la página.']));
 }
 
 // Verificar si el token ha expirado
@@ -28,17 +26,18 @@ if (time() > $_SESSION['csrf_token_expiry']) {
     unset($_SESSION['csrf_token']);
     unset($_SESSION['csrf_token_expiry']);
     http_response_code(403);
-    die("CSRF token expirado. Por favor, recarga la página.");
+    die(json_encode(['error' => 'CSRF token expirado. Por favor recarga la página.']));
 }    
 
 // Verificar si el token enviado coincide con el almacenado
 if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
     http_response_code(403);
-    die("CSRF token inválido.");
+    die(json_encode(['error' => 'CSRF token inválido. Por favor recarga la página.']));
 }
 
 unset($_SESSION['csrf_token']); // opcional: evitar reutilización de CSRF
 unset($_SESSION['csrf_token_expiry']);
+
 
 // Validar reCAPTCHA    
 $recaptchaSecret = '6LcqwysrAAAAAE5OExizdsYJ5sJ9dpmw0Rdrdlzw';
@@ -48,20 +47,13 @@ $response = file_get_contents("{$recaptchaUrl}?secret={$recaptchaSecret}&respons
 $responseData = json_decode($response);
 
 if (!$responseData->success) {
-    echo "<script>
-            window.location.href = '/weblapuente/empresa/recuursosHumanos/trabajaConNosotros.html';
-    
-        </script>";
-    exit;
+    http_response_code(400);
+    die(json_encode(['error' => 'Error: reCAPTCHA no válido.Recarga la página.']));
 }
 
-//Comprobación de aceptación de condiciones
-/*if (!isset($_POST['privacidad'])) {
-    die('Debes aceptar la política de privacidad para enviar el formulario.');
-}*/
 
-//Validación básica y sanificación de datos
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+// Validación básica y sanificación de datos
 
     $nombre = htmlspecialchars((trim($_POST['nombre'] )));
     $mail=filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
@@ -72,34 +64,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tipoContrato = htmlspecialchars((trim($_POST["tipoContrato"])));
 
      // Validar archivo adjunto
- /*    if (isset($_FILES["cv"]) && $_FILES["cv"]["error"] === UPLOAD_ERR_OK) {
-        $cv = $_FILES["cv"];
-        $cvNombre = $cv["name"];
-        $cvTmpNombre = $cv["tmp_name"];
-        $cvDestino = "uploads/" . basename($cvNombre);
-
-        // Mover el archivo a la carpeta "uploads"
-        if (!is_dir("uploads")) {
-            mkdir("uploads", 0777, true);
+     if (isset($_FILES['cv']) && $_FILES['cv']['error'] === UPLOAD_ERR_OK) {
+        
+    
+        // Validar tipo de archivo
+        $allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        if (!in_array($_FILES['cv']['type'], $allowedTypes)) {
+            http_response_code(400);
+            die(json_encode(['error' => 'Error: El archivo debe ser un PDF, DOC o DOCX.', 'redirect' => '/weblapuente/empresa/recursosHumanos/trabajaConNosotros.html']));
+ 
         }
-        move_uploaded_file($cvTmpNombre, $cvDestino);
-    } else {
-        echo "Error al subir el archivo.";
-        exit;
-    }   */
-}  
+    
+        // Validar tamaño del archivo (máximo 5 MB)
+        if ($_FILES['cv']['size'] > 5 * 1024 * 1024) {
+            http_response_code(400);
+            die(json_encode(['error' => 'Error: El archivo no debe superar los 5 MB.', 'redirect' => '/weblapuente/empresa/recursosHumanos/trabajaConNosotros.html']));
+        }
 
-if(!$mail){
-    die('El email proporcionado no es válido.');
-}
+        $cvTmpPath = $_FILES['cv']['tmp_name'];
+        $cvName = $_FILES['cv']['name'];
+        $cvSize = $_FILES['cv']['size'];
+        $cvType = $_FILES['cv']['type'];
+    } else {
+         // Si no se adjunta un archivo, inicializa las variables como vacías
+        $cvTmpPath = null;
+        $cvName = null;
+        $cvSize = null;
+        $cvType = null;
+
+    } 
+    
 
 
 //Carga de variables de entorno con libreria vlucas/phpdotenv
 $dotenv=Dotenv\Dotenv::createImmutable('C:/xampp/webLapuente_env');
 $dotenv->load();
 
-//Validar campos del formulario
-if (!empty($nombre)&& !empty($mail) && !empty($telefono) && !empty($provincia) && !empty($nivelEstudios) && !empty($areaFuncional) && !empty($tipoContrato)){
 
 
 $email = new PHPMailer(true); 
@@ -131,24 +131,20 @@ try {
                     <p><strong>Tipo de contrato:</strong>$tipoContrato</p>
                     ";
 
-                
+    if($cvTmpPath===null && $cvName===null && $cvSize===null && $cvType===null){ 
+        $email->send();
+    }else{
+        $email->addAttachment($cvTmpPath, $cvName);
+        $email->send();
+        
+    }
 
-    // Envío del mensaje
-    $email->send();
-
-     // Después de procesar el formulario
-     $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // Generar un nuevo token
-     $_SESSION['csrf_token_expiry'] = time() + (30 * 60); // 30 minutos de expiración 
-     echo "<script>
-             document.getElementById('csrf_token').value = '{$_SESSION['csrf_token']}';
-             window.location.href = '/weblapuente/empresa/recuursosHumanos/trabajaConNosotros.html';
-             </script>";      
-        exit;
+    // Respuesta de éxito
+    echo json_encode(['success' => true, 'redirect' => '/weblapuente/empresa/recursosHumanos/trabajaConNosotros.html']);
 } catch (Exception $e) {
-    echo '<p>El mensaje no se ha podido enviar.</p>';
+    http_response_code(500);
+    echo json_encode(['error' => 'Error: No se pudo enviar el mensaje. ' . $e->getMessage()]);
 }
-}else{
-    echo '<p>Por favor rellena todos los campos correctamente.</p>';
-}
+
 
 ?>

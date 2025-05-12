@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trabajaConNosotros</title>
-   
-    <link rel="stylesheet" href="../../web_css/principal.css">
-    <link rel="stylesheet" href="../web_css/trabajaConNosotros.css">
-   
+    
+    <link rel="stylesheet" href="/weblapuente/web_css/principal.css">
+    <link rel="stylesheet" href="./trabajaConNosotros.css">
     <script src="/weblapuente/web_js/sweetalert2.js"></script>
+    
     <script src="/weblapuente/empresa//web_js/trabajaConNosotros.js"></script>
 </head>
 <body>
@@ -123,7 +123,7 @@
 
 
 
-            <form id="jobApplicationForm" action="../../sendmailtrabaja.php" method="POST" > <!--enctype="multipart/form-data"-->
+            <form id="jobApplicationForm" action="../../sendmailtrabaja.php" method="POST" enctype="multipart/form-data">
                
                 <div>
                     <label for="nombre">Nombre y Apellidos:</label>
@@ -239,14 +239,14 @@
                 </div>
 
 
-                  <div class="checkboxContainer"> 
-                    <div class="checkbox">
-                    <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
-                  </div>
-                  <div class="checkboxLabel">
-                    <label for="privacidad">Acepto las <a href="/weblapuente/politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
-                  </div> 
-                  </div>
+                <div class="checkboxContainertrab"> 
+                         <div class="checkboxtrab">
+                            <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
+                         </div>
+                         <div class="checkboxLabeltrab">
+                            <label for="privacidad">Acepto las <a href="/weblapuente/politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
+                         </div> 
+                </div>
                     
                   
                     <div class="g-recaptcha" data-sitekey="6LcqwysrAAAAALeW31bJuAR-Os-2H-FhYuEK8nzH" data-callback="recaptchaCallback"></div>

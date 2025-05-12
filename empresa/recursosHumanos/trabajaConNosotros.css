@@ -138,17 +138,18 @@ form a:hover {
    border-radius: 25px;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    
-} */
+} 
 .comprobacion{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-}
+  background-color: aquamarine;
+} 
 
 .pieForm{
+  
   width: 100%;
   display:flex;
   flex-direction: row;
@@ -161,7 +162,18 @@ form a:hover {
 
 #privacidad{
   display: inline-block; 
-}	
+}	*/
+
+.checkboxContainertrab {
+  width:100%;
+  display: flex;
+  justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
+  align-items: baseline; /* Alinea verticalmente los elementos */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px; /* Espaciado entre el checkbox y la etiqueta */
+}
+
 
 .g-recaptcha {
   display: inline-block !important; /* Asegura que el reCAPTCHA se comporte como un elemento en línea */
@@ -169,28 +181,19 @@ form a:hover {
   align-self: center;
 }
 
-.checkboxContainer {
-  width:100%;
-  background-color: bisque;
-  display: flex;
-  justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
-  align-items: center; /* Alinea verticalmente los elementos */
-  margin-top: 10px;
-  margin-bottom: 10px;
-  gap: 10px; /* Espaciado entre el checkbox y la etiqueta */
-}
 
-.checkbox {
+
+.checkboxtrab {
   width:10%;
   display: flex;
   align-items: center; /* Asegura que el checkbox esté centrado verticalmente */
 }
 
-.checkbox input[type="checkbox"] {
+.checkboxtrab input[type="checkbox"] {
   margin: 0; /* Elimina márgenes adicionales */
 }
 
-.checkboxLabel {
+.checkboxLabeltrab {
   display: inline-block;
   margin: 0; /* Asegura que no haya márgenes adicionales */
 }

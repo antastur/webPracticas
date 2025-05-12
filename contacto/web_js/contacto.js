@@ -62,23 +62,30 @@ document.addEventListener('DOMContentLoaded', async function() {
                 method: 'POST',
                 body: formData
             });
+
+            const result = await response.json();
     
-            if (response.ok) {
+            if (response.ok && result.success) {
+                // Mostrar mensaje de éxito
                 Swal.fire({
                     icon: 'success',
                     title: 'Mensaje enviado',
                     text: 'Tu mensaje ha sido enviado correctamente.',
                     confirmButtonText: 'Aceptar'
+                }).then(() => {
+                    // Redirigir a trabajaConNosotros.html
+                    window.location.href = result.redirect;
+                    
                 });
 
                 // Actualizar el token CSRF desde el servidor
-                try {
+             /*   try {
                     const csrfResponse = await fetch('/weblapuente/get-csrf-token.php');
                     const csrfData = await csrfResponse.json();
                     document.getElementById('csrf_token').value = csrfData.csrf_token;
                 } catch (csrfError) {
                     console.error('Error al actualizar el token CSRF:', csrfError);
-                }
+                } 
 
                 
                 // Borrar todos los campos del formulario
@@ -89,12 +96,13 @@ document.addEventListener('DOMContentLoaded', async function() {
 
                 // Deshabilitar el botón de enviar nuevamente
                 toggleSubmitButton();
-
+                        
+                    */      
             } else {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.',
+                    text: result.error ||'Hubo un problema al enviar el formulario.',
                     confirmButtonText: 'Aceptar'
                 });
             }
