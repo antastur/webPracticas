@@ -4,6 +4,7 @@
  
  
  body{
+ 
   margin: 0;
   padding: 0;
   width:100%; 
@@ -64,6 +65,7 @@ ul {
 
 
 li {
+    
     padding-bottom: 10px;
     position: relative;
   /* display: inline-block;*/
@@ -74,7 +76,8 @@ li {
      /* color: rgb(7, 7, 7);*/
       color: #007bff;
       text-decoration: none;
-      padding: 10px 15px; 
+   /*   padding: 10px 15px; */
+   
       display:inline-flex; 
       }
 
@@ -133,12 +136,25 @@ li {
   gap:30px;
 }
 
+.menuNav li{
+  color: #007bff;
+  padding: 20px;
+/*  padding-top: 20px; */
+}
 
  /* Estilo para el menú de navegación.Marcar en rojo bordes al pasar cursor */
 .menuNav > li:hover{
   border-top: #c50808de 5px solid;
   border-bottom: #c50808de 5px solid;
   }
+
+  .menuNav ul {
+    display: none; /* Oculta los submenús por defecto */
+}
+
+.menuNav ul.open {
+    display: block; /* Muestra los submenús cuando tienen la clase 'open' */
+}
  
  /* Estilo para el submenú (desplegable) */
   li ul {
@@ -171,7 +187,7 @@ li {
 
  .desplegable > li:hover{
     margin-top: 0px;
-    padding-top: 0px;
+    padding-top: 20px;
     border-top: #c50808de 5px solid;
     border-bottom: #c50808de 5px solid;
     color:#c50808de;
@@ -187,7 +203,7 @@ li {
     border-bottom: #0505b1ce 3px solid;
     background-color:#c50808de; */
     margin-top: 0px;
-    padding-top: 0px;
+    padding-top: 20px;
 
     border-top: #c50808de 5px solid;
     border-bottom: #c50808de 5px solid;
@@ -198,7 +214,7 @@ li {
   
     border-top: #c50808de 5px solid;
     border-bottom: #c50808de 5px solid;
-  
+    
     
   }
 
@@ -308,6 +324,7 @@ footer p{
   }
 
   .pie2{
+    
     width:40%;
     min-width: 300px;
     margin-top: 5px;
@@ -322,6 +339,7 @@ footer p{
 
 
 .pie div{
+
   padding-top: 5px;
   
 }
@@ -343,7 +361,7 @@ footer p{
   align-items: center;
   flex-wrap: wrap;
   margin-right: 40px;
-  
+  width:100%;
 }
 
 .contacto a{
@@ -439,7 +457,9 @@ footer p{
 
 .menuNav li {
   text-align: center;
-  padding: 0px 0;
+  
+  padding: 10px 10px;
+  color:white;
   background-color:  rgba(5, 5, 177);
   border: #007bff 2px solid;
   border-radius: 10px;
@@ -592,13 +612,15 @@ margin:0%;
   border-radius: 10px;
   height: 70px;
   text-align: left;
-  
+   padding-top: 20px;
+  padding-bottom: 20px;
  
 }
 
 .desplegable li{
   background-color:rgba(5, 5, 177);
   padding: 0px;
+  
 }
 
 
