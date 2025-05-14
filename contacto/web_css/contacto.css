@@ -18,7 +18,7 @@
     margin: 0px;
   }
   
-  .contenedor{
+  .contenedorContacto{
     box-sizing: border-box;
     width: 100%;
     display:flex;
@@ -100,21 +100,34 @@
     min-width: 200px;
     text-align: justify;
    }
-
+/*
    iframe{
     box-sizing: border-box;
    width: 280px; 
    height: 280px;
    padding: 20px;
-   /*border: rgba(5, 5, 177, 0.808) 5px solid;*/
+   /*border: rgba(5, 5, 177, 0.808) 5px solid;
    border: rgba(187, 35, 14, 0.808) 5px solid;  
    border-radius: 5%;
    margin-bottom: 30px;
    
    }
+*/
 
+.map{
+  box-sizing: border-box;
+ width: 280px; 
+ height: 280px;
+ padding: 20px;
+ /*border: rgba(5, 5, 177, 0.808) 5px solid;*/
+ border: rgba(187, 35, 14, 0.808) 5px solid;  
+ border-radius: 5%;
+ margin-bottom: 30px;
+ 
+ }
 
   form {
+     
       width:40%;
       min-width: 400px;
       height: 700px;
@@ -129,9 +142,6 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  form div {
-      margin-bottom: 15px;
-  }
   
   label {
       display: block;
@@ -163,12 +173,20 @@
       background-color: #0056b3;
   }
   
+  button:disabled {
+    background-color: #cccccc; /* Gris claro */
+    color: #666666; /* Gris oscuro */
+    cursor: not-allowed; /* Cursor de no permitido */
+    opacity: 0.7; /* Transparencia para indicar que está deshabilitado */
+}
+  
 
   form a:hover {
       text-decoration: underline;
   }
 
   form div {
+    margin-bottom: 15px;
     display: flex;
     align-items: baseline; /* Alinea verticalmente el checkbox y el texto */
     gap: 10px; /* Espaciado entre el checkbox y el texto */
@@ -184,6 +202,37 @@
   /*  align-self: center;  Elimina márgenes adicionales del checkbox */
 }
 
+.comprobacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  
+}
+
+    
+
+.reccentrado {
+ 
+  position:relative;
+  height: 80px;
+/* Asegura que esté por encima de todo */
+  background-color: white; /* Opcional: agrega un fondo blanco si es necesario */
+ /* Opcional: agrega espacio alrededor */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra */
+ 
+}
+
+.gcaptcha {
+  position:absolute;
+}
+
+
+/*
 .formFooter{
     display: flex;
     flex-direction: column;

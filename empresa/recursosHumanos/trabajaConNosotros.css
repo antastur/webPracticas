@@ -57,7 +57,7 @@
     }
 
     form {
-      
+      position:relative;
       width:35%;
       min-width: 400px;
     /* max-width: 600px; */
@@ -79,12 +79,8 @@
      
   }
 
-  .pieForm{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items:baseline; }
-
+  
+/*
  .pieForm input{
   width:20%;
   margin-left: 10px;
@@ -92,11 +88,11 @@
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
- }
+ } 
   .pieForm a{
     margin: 0px;
     padding: 0px;
-  }
+  }*/
   label {
     color:#007bff;
       display: block;
@@ -142,5 +138,62 @@ form a:hover {
    border-radius: 25px;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    
-} */
+} 
+.comprobacion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  background-color: aquamarine;
+} 
 
+.pieForm{
+  
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+  padding:0px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#privacidad{
+  display: inline-block; 
+}	*/
+
+.checkboxContainertrab {
+  width:100%;
+  display: flex;
+  justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
+  align-items: baseline; /* Alinea verticalmente los elementos */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px; /* Espaciado entre el checkbox y la etiqueta */
+}
+
+
+.g-recaptcha {
+  display: inline-block !important; /* Asegura que el reCAPTCHA se comporte como un elemento en línea */
+  text-align: center; /* Centra el contenido dentro del contenedor */
+  align-self: center;
+}
+
+
+
+.checkboxtrab {
+  width:10%;
+  display: flex;
+  align-items: center; /* Asegura que el checkbox esté centrado verticalmente */
+}
+
+.checkboxtrab input[type="checkbox"] {
+  margin: 0; /* Elimina márgenes adicionales */
+}
+
+.checkboxLabeltrab {
+  display: inline-block;
+  margin: 0; /* Asegura que no haya márgenes adicionales */
+}
