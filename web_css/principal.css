@@ -434,7 +434,9 @@ footer p{
 
   /* ----------------------------Estilo para el menú principal en pantallas pequeñas --------------------------------*/
 
-  
+  .infMenu{
+    padding-left:30px;
+  }
 
   .menuNav {
     display: none; /* Oculto por defecto */
@@ -461,7 +463,7 @@ footer p{
   padding: 10px 10px;
   color:white;
   background-color:  rgba(5, 5, 177);
-  border: #007bff 2px solid;
+  border: rgba(5, 5, 177) 2px solid;
   border-radius: 10px;
 }
 
@@ -520,7 +522,7 @@ footer p{
   width: 100%;
   top: 40px;
   /*left: -75%;*/
-  left:  -90%;
+  left:  -130%;
   z-index: 1000;
 }
 
@@ -563,14 +565,14 @@ footer p{
 }
 
 .horizontal2 li{
-  background-color: #007bff ;
+  background-color: #abcef3 ;
   padding-top: 0px;
   padding-bottom: 20px;
   padding-left: 5px;  
   padding-right: 5px;
   border-radius: 10px;
   height: 120px;
-  width: 120px;
+  width: 40%;
  
 }
 
@@ -592,7 +594,7 @@ margin:0%;
 .desplegable{
   /*display: none;*/
   position: absolute;
-  left:45%;
+  left:75%;
   top: 0%;
   z-index: 1001;  
 }
@@ -630,6 +632,13 @@ margin:0%;
   top: -120%;
   z-index: 1001;  
 }
+}
+
+/*----------------------------------------------AJUSTES PARA LA SECCIÓN DE NUESTRA HISTORIA----------------------------------------------*/
+
+.nuestraHistoria{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 

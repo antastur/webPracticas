@@ -127,7 +127,7 @@ h3{
 
   .subNosotros{
     width: 45%;
-    min-width: 265px;
+    min-width: 300px;
     display:flex;
     flex-direction: column;
     justify-content:center;

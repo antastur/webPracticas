@@ -25,6 +25,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    margin-top: 80px;
 }
 
 .tecnologia{
@@ -54,12 +55,12 @@
 
  .textoTecnologia{
     width: 35%;
-    min-width: 280px;
+    min-width: 300px;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+   /* align-items: center;*/
     text-align: start;
    
  }
@@ -70,4 +71,13 @@
 
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ }
+
+
+
+ @media (max-width: 480px) {
+
+ .textoTecnologia{
+  width:85%;
+}
  }
