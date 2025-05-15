@@ -40,8 +40,17 @@ if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
 unset($_SESSION['csrf_token']); // opcional: evitar reutilización de CSRF
 unset($_SESSION['csrf_token_expiry']);
 
+
+
+//Carga de variables de entorno con libreria vlucas/phpdotenv
+$dotenv=Dotenv\Dotenv::createImmutable('C:\xampp\htdocs\weblapuente');    
+$dotenv->load();
+
+
+
+
 // Validar reCAPTCHA    
-$recaptchaSecret = '6LcvYjYrAAAAANWz2ITi7HhmAfzY1zwuz-HndWG8';
+$recaptchaSecret = '6LfPMjorAAAAADNOL8RKhy74QAyCxBccVHuBlDUk';
 $recaptchaResponse = $_POST['g-recaptcha-response'];
 $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
 $response = file_get_contents("{$recaptchaUrl}?secret={$recaptchaSecret}&response={$recaptchaResponse}");
@@ -51,6 +60,7 @@ if (!$responseData->success) {
     http_response_code(400);
     die(json_encode(['error' => 'Error: reCAPTCHA no válido.Recarga la página.']));
 }
+                                                                                                                                                               
 
 //Comprobación de aceptación de condiciones
 /*if (!isset($_POST['privacidad'])) {
@@ -71,9 +81,7 @@ if(!$mail){
 }
 */
 
-//Carga de variables de entorno con libreria vlucas/phpdotenv
-$dotenv=Dotenv\Dotenv::createImmutable('C:/var/webLapuente_env');
-$dotenv->load();
+
 
 //Validar campos del formulario
 //if (!empty($nombre)&& !empty($mail) && !empty($telefono) && !empty($mensaje)){
@@ -112,7 +120,7 @@ try {
 
     
     // Respuesta de éxito
-    echo json_encode(['success' => true, 'redirect' => '/weblapuente/contacto/contacto.html']);
+    echo json_encode(['success' => true, 'redirect' => '/webLapuente/contacto/contacto.html']);
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode(['error' => 'Error: No se pudo enviar el mensaje. ' . $e->getMessage()]);

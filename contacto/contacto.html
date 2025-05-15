@@ -146,7 +146,7 @@
             </div>
     
 
-             <form id="contactForm" action="/weblapuente/sendmail.php" method="POST">
+             <form id="contactForm" action="/webLapuente/sendmail.php" method="POST">
         
                     <div>
                         <label for="nombre">Nombre:</label>
@@ -169,14 +169,14 @@
                     <div class="comprobacion">
                     <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
                     <label for="privacidad">Acepto las <a href="/weblapuente/politicas/aviso-legal.html" target="_blank">condiciones de privacidad</a></label>
-                    <div class="reccentrado">
-                        <div class="g-recaptcha" data-sitekey="6LcvYjYrAAAAAIiH7fzLehBFdB0q1jK-MDZrtbT8" data-callback="recaptchaCallback"></div>
-                    </div>
+                  <div class="reccentrado">
+                        <div class="g-recaptcha" data-sitekey="6LfPMjorAAAAABwEFklOlqXVUZoKZCMlyIP-WIur" data-callback="recaptchaCallback"></div>
+                    </div>                                                                                                                                                                     -->   
                     </div>
             
                     
                     <input type="hidden" name="csrf_token" id="csrf_token">
-                    <button type="submit" id="botonEnviar" disabled="true">Enviar</button>
+                    <button type="submit" id="botonEnviar" >Enviar</button>  <!-- cambiar disabled a true-->
         
 
          <!-- Google reCAPTCHA 
@@ -238,9 +238,9 @@
 
 
      </footer>
-   <!-- <script src="web_js/contacto.js"></script> --> 
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-   <!-- <script src="/weblapuente/contacto/web_js/contacto.js"></script> -->
+ <!-- <script src="web_js/contacto.js"></script> --> 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>                                                                                                                                           
+  <!-- <script src="/weblapuente/contacto/web_js/contacto.js"></script> --> 
  
 </body>
 </html>

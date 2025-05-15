@@ -13,29 +13,29 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     //Gestion de habilitación del botón
     const privacidadCheckbox = document.getElementById('privacidad');
-    const botonEnviar = document.getElementById('botonEnviar');
+    const botonEnviar = document.getElementById('botonEnviar');                                 
 
      // Función para verificar si el reCAPTCHA está completado
-     function isRecaptchaCompleted() {
-        return grecaptcha && grecaptcha.getResponse().length > 0;
-    }
+    function isRecaptchaCompleted() {
+        return grecaptcha && grecaptcha.getResponse().length > 0;                         
+    }                                                                                                
 
     // Función para habilitar o deshabilitar el botón
-    function toggleSubmitButton() {
-        if (privacidadCheckbox.checked && isRecaptchaCompleted()) {
+      function toggleSubmitButton() {
+      if (privacidadCheckbox.checked && isRecaptchaCompleted()) {
             botonEnviar.disabled = false;
         } else {
             botonEnviar.disabled = true;
         }
-    }
+    }                                                                                                       
 
     // Evento para verificar el estado del checkbox
-    privacidadCheckbox.addEventListener('change', toggleSubmitButton);
+    privacidadCheckbox.addEventListener('change', toggleSubmitButton);                                    
 
     // Evento para verificar el estado del reCAPTCHA
     window.recaptchaCallback = function () {
         toggleSubmitButton();
-    };
+    };                                                                                                      
 
 
      document.getElementById("contactForm").addEventListener("submit", async function (event) {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
             const result = await response.json();
     
-            if (response.ok && result.success) {
+            if (response.ok /*&& result.success*/) {
                 // Mostrar mensaje de éxito
                 Swal.fire({
                     icon: 'success',
