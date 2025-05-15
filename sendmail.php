@@ -50,7 +50,7 @@ $dotenv->load();
 
 
 // Validar reCAPTCHA    
-$recaptchaSecret = '6LfPMjorAAAAADNOL8RKhy74QAyCxBccVHuBlDUk';
+$recaptchaSecret = $_ENV['RECAPTCHA_SECRET'];
 $recaptchaResponse = $_POST['g-recaptcha-response'];
 $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
 $response = file_get_contents("{$recaptchaUrl}?secret={$recaptchaSecret}&response={$recaptchaResponse}");
